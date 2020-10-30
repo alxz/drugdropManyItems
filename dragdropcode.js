@@ -24,22 +24,42 @@
             'correctDest4' : 3
         },
         {
-            'imgSrc' : '<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
-            'imgDest1' :  '<img src="img/desktopPrinter.png" alt="desktopPrinter" width="180" height="180">',
-            'imgDest2' :  '<img src="img/kyoceraFollowMe.png" alt="kyoceraFollowMe" width="180" height="180">',
-            'txtDest1' :  '<h3>Office Printer</h3>',
-            'txtDest2' :  '<h3>Kyocera FloowMe Printer</h3>',
-            'backgColor' : '#abcbf5',
-            'correctDest' : 2
+            'imgSrc1' : '<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
+            'imgSrc2' : '<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
+            'imgSrc3' : '<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+            'imgSrc4' : '<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
+                'imgDest1' :  '<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">',
+                'imgDest4' :  '<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">',            
+                'imgDest2' :  '<img src="img/Aegis-password-protectUSB-drive.png" alt="Password-protectUSB-drive" width="180" height="180">',
+                'imgDest3' :  '<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">',
+                'txtDest1' :  '<h3>Copy To USB Key</h3>',
+                'txtDest4' :  '<h3>Carry in a briefcase</h3>',
+                'txtDest2' :  '<h3>Should Have Encryption</h3>',
+                'txtDest3' :  '<h3>MUST Have Encryption</h3>',
+                'backgColor' : '#ec9b9b',
+                'correctDest1' : 1,
+                'correctDest2' : 4,
+                'correctDest3' : 2,
+                'correctDest4' : 3
         },    
         {
-        'imgSrc' : '<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
-            'imgDest1' :  '<img src="img/paper-shredder.png" alt="paper-shredder" width="180" height="180">',        
-            'imgDest2' :  '<img src="img/rubbish-waste-paper.png" alt="rubbish-waste" width="180" height="180">',
-            'txtDest1' :  '<h3>Shredder for Paper</h3>',
-            'txtDest2' :  '<h3>Office Waste Bin</h3>',
-            'backgColor' : '#abddec',
-            'correctDest' : 1        
+            'imgSrc1' : '<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
+            'imgSrc2' : '<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
+            'imgSrc3' : '<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+            'imgSrc4' : '<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
+                'imgDest1' :  '<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">',
+                'imgDest4' :  '<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">',            
+                'imgDest2' :  '<img src="img/Aegis-password-protectUSB-drive.png" alt="Password-protectUSB-drive" width="180" height="180">',
+                'imgDest3' :  '<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">',
+                'txtDest1' :  '<h3>Copy To USB Key</h3>',
+                'txtDest4' :  '<h3>Carry in a briefcase</h3>',
+                'txtDest2' :  '<h3>Should Have Encryption</h3>',
+                'txtDest3' :  '<h3>MUST Have Encryption</h3>',
+                'backgColor' : '#ec9b9b',
+                'correctDest1' : 1,
+                'correctDest2' : 4,
+                'correctDest3' : 2,
+                'correctDest4' : 3
         }
 
         
