@@ -130,22 +130,22 @@
                         { 
                             id: 1, 
                             img:'<img src="img/cloud-storage.png" alt="cloud-storage" width="180" height="180">', 
-                            txt:'<h3>Copy To USB Key</h3>'
+                            txt:'<h3>Store on any publick cloud service</h3>'
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/MS-Teams-logo.png" alt="MS-Teams-logo" width="180" height="180">', 
-                            txt:'<h3>Carry in a briefcase</h3>' 
+                            txt:'<h3>TEAMS or other corp shared storage</h3>' 
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/TeamsLogorev.png" alt="TeamsLogorev" width="180" height="180">', 
-                            txt:'<h3>Should Have Encryption</h3>'
+                            txt:'<h3>TEAMS Shared only for specific persons or groups</h3>'
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/nextCloud.png" alt="nextCloud" width="180" height="180">', 
-                            txt:'<h3>MUST Use Encryption Software</h3>' 
+                            txt:'<h3>Corp NextCloud, cloud within MUHC encryption Canada/EU</h3>' 
                         }
                     ]
             }, 
