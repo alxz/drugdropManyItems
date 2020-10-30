@@ -5,14 +5,22 @@
     $( init );
     var arrObjects = [
         {
-        'imgSrc1' : '<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
-        'imgSrc2' : '<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
-        'imgSrc3' : '<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
-        'imgSrc4' : '<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
-            'imgDest1' :  '<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">',
-            'imgDest4' :  '<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">',            
-            'imgDest2' :  '<img src="img/Aegis-password-protectUSB-drive.png" alt="Password-protectUSB-drive" width="180" height="180">',
-            'imgDest3' :  '<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">',
+            'game1': {
+                'imgSrc': 
+                    ['<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
+                        '<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
+                        '<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+                        '<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">'
+                    ],
+                'imgDest': 
+                [
+                    '<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">',
+                    '<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">',            
+                    '<img src="img/Aegis-password-protectUSB-drive.png" alt="Password-protectUSB-drive" width="180" height="180">',
+                    '<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">',
+                ]
+            },    
+            
             'txtDest1' :  '<h3>Copy To USB Key</h3>',
             'txtDest4' :  '<h3>Carry in a briefcase</h3>',
             'txtDest2' :  '<h3>Should Have Encryption</h3>',
@@ -24,57 +32,79 @@
             'correctDest4' : 3
         },
         {
-            'imgSrc1' : '<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
-            'imgSrc2' : '<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
-            'imgSrc3' : '<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
-            'imgSrc4' : '<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
-                'imgDest1' :  '<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">',
-                'imgDest4' :  '<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">',            
-                'imgDest2' :  '<img src="img/Aegis-password-protectUSB-drive.png" alt="Password-protectUSB-drive" width="180" height="180">',
-                'imgDest3' :  '<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">',
-                'txtDest1' :  '<h3>Copy To USB Key</h3>',
-                'txtDest4' :  '<h3>Carry in a briefcase</h3>',
-                'txtDest2' :  '<h3>Should Have Encryption</h3>',
-                'txtDest3' :  '<h3>MUST Have Encryption</h3>',
-                'backgColor' : '#ec9b9b',
-                'correctDest1' : 1,
-                'correctDest2' : 4,
-                'correctDest3' : 2,
-                'correctDest4' : 3
-        },    
+            'game1': {
+                'imgSrc': 
+                    ['<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
+                        '<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
+                        '<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+                        '<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">'
+                    ],
+                'imgDest': 
+                [
+                    '<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">',
+                    '<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">',            
+                    '<img src="img/Aegis-password-protectUSB-drive.png" alt="Password-protectUSB-drive" width="180" height="180">',
+                    '<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">',
+                ]
+            },    
+            
+            'txtDest1' :  '<h3>Copy To USB Key</h3>',
+            'txtDest4' :  '<h3>Carry in a briefcase</h3>',
+            'txtDest2' :  '<h3>Should Have Encryption</h3>',
+            'txtDest3' :  '<h3>MUST Have Encryption</h3>',
+            'backgColor' : '#ec9b9b',
+            'correctDest1' : 1,
+            'correctDest2' : 4,
+            'correctDest3' : 2,
+            'correctDest4' : 3
+        },  
         {
-            'imgSrc1' : '<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
-            'imgSrc2' : '<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
-            'imgSrc3' : '<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
-            'imgSrc4' : '<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
-                'imgDest1' :  '<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">',
-                'imgDest4' :  '<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">',            
-                'imgDest2' :  '<img src="img/Aegis-password-protectUSB-drive.png" alt="Password-protectUSB-drive" width="180" height="180">',
-                'imgDest3' :  '<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">',
-                'txtDest1' :  '<h3>Copy To USB Key</h3>',
-                'txtDest4' :  '<h3>Carry in a briefcase</h3>',
-                'txtDest2' :  '<h3>Should Have Encryption</h3>',
-                'txtDest3' :  '<h3>MUST Have Encryption</h3>',
-                'backgColor' : '#ec9b9b',
-                'correctDest1' : 1,
-                'correctDest2' : 4,
-                'correctDest3' : 2,
-                'correctDest4' : 3
-        }
-
-        
+            'game1': {
+                'imgSrc': 
+                    ['<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
+                        '<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
+                        '<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+                        '<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">'
+                    ],
+                'imgDest': 
+                [
+                    '<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">',
+                    '<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">',            
+                    '<img src="img/Aegis-password-protectUSB-drive.png" alt="Password-protectUSB-drive" width="180" height="180">',
+                    '<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">',
+                ]
+            },    
+            
+            'txtDest1' :  '<h3>Copy To USB Key</h3>',
+            'txtDest4' :  '<h3>Carry in a briefcase</h3>',
+            'txtDest2' :  '<h3>Should Have Encryption</h3>',
+            'txtDest3' :  '<h3>MUST Have Encryption</h3>',
+            'backgColor' : '#ec9b9b',
+            'correctDest1' : 1,
+            'correctDest2' : 4,
+            'correctDest3' : 2,
+            'correctDest4' : 3
+        }        
     ];
 
     function init() {
         //set initial images:
-        var docImg1 = arrObjects[objectId].imgSrc1;
-        var docImg2 = arrObjects[objectId].imgSrc2;
-        var docImg3 = arrObjects[objectId].imgSrc3;
-        var docImg4 = arrObjects[objectId].imgSrc4;    
-        var imgDest1 = arrObjects[objectId].imgDest1;  
-        var imgDest2 = arrObjects[objectId].imgDest2;
-        var imgDest3 = arrObjects[objectId].imgDest3;  
-        var imgDest4 = arrObjects[objectId].imgDest4;
+        var docImg = []; 
+        var imgDest = [];
+        for (let i = 0; i < arrObjects[objectId].game1.imgSrc.length; i++) {
+            docImg[i] = arrObjects[objectId].game1.imgSrc[i];
+        }
+        for (let i = 0; i < arrObjects[objectId].game1.imgDest.length; i++) {
+            imgDest[i] = arrObjects[objectId].game1.imgDest[i];
+        }
+        // var docImg1 = arrObjects[objectId].imgSrc1;
+        // var docImg2 = arrObjects[objectId].imgSrc2;
+        // var docImg3 = arrObjects[objectId].imgSrc3;
+        // var docImg4 = arrObjects[objectId].imgSrc4;    
+        // var imgDest1 = arrObjects[objectId].imgDest1;  
+        // var imgDest2 = arrObjects[objectId].imgDest2;
+        // var imgDest3 = arrObjects[objectId].imgDest3;  
+        // var imgDest4 = arrObjects[objectId].imgDest4;
         var correctDestId1 = arrObjects[objectId].correctDest1;
         var correctDestId2 = arrObjects[objectId].correctDest2;
         var correctDestId3 = arrObjects[objectId].correctDest3;
@@ -118,25 +148,25 @@
     // Create the pile of shuffled cards
     //$('<div>' + '' + '</div>').data( 'number', 10 ).attr( 'id', 'emptyCard'+0 ).appendTo( '#cardPile' ); // empty slot
     //$('<div>' + '' + '</div>').data( 'number', 11 ).attr( 'id', 'emptyCard'+1 ).appendTo( '#cardPile' ); // empty slot
-    $('<div>' + docImg1 + '</div>').data( 'number', correctDestId1 ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+    $('<div>' + docImg[0] + '</div>').data( 'number', correctDestId1 ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
         containment: '#content',
         stack: '#cardPile div',
         cursor: 'move',
         revert: true
         } );
-    $('<div>' + docImg2 + '</div>').data( 'number', correctDestId2 ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+    $('<div>' + docImg[1] + '</div>').data( 'number', correctDestId2 ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
         containment: '#content',
         stack: '#cardPile div',
         cursor: 'move',
         revert: true
         } );
-    $('<div>' + docImg3 + '</div>').data( 'number', correctDestId3 ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+    $('<div>' + docImg[2] + '</div>').data( 'number', correctDestId3 ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
         containment: '#content',
         stack: '#cardPile div',
         cursor: 'move',
         revert: true
         } );        
-    $('<div>' + docImg4 + '</div>').data( 'number', correctDestId4 ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+    $('<div>' + docImg[3] + '</div>').data( 'number', correctDestId4 ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
         containment: '#content',
         stack: '#cardPile div',
         cursor: 'move',
@@ -148,22 +178,22 @@
 
     // Create the card slots
     //$('<div>' + ' ' + '</div>').data( 'number', 100 ).appendTo( '#cardSlots' );  
-    $('<div>' + imgDest1 + txtDest1 + '</div>').data( 'number', 1 ).appendTo( '#cardSlots' ).droppable( {
+    $('<div>' + imgDest[0] + txtDest1 + '</div>').data( 'number', 1 ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
         } );
-    $('<div>' + imgDest2 + txtDest2 + '</div>').data( 'number', 2 ).appendTo( '#cardSlots' ).droppable( {
+    $('<div>' + imgDest[1] + txtDest2 + '</div>').data( 'number', 2 ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
         } );
-    $('<div>' + imgDest3 + txtDest3 + '</div>').data( 'number', 3 ).appendTo( '#cardSlots' ).droppable( {
+    $('<div>' + imgDest[2] + txtDest3 + '</div>').data( 'number', 3 ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
         } );
-    $('<div>' + imgDest4 + txtDest4 + '</div>').data( 'number', 4 ).appendTo( '#cardSlots' ).droppable( {
+    $('<div>' + imgDest[3] + txtDest4 + '</div>').data( 'number', 4 ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
