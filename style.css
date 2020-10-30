@@ -1,0 +1,335 @@
+/* Add some margin to the page and set a default font and colour */
+body {
+    margin: 30px;
+    font-family: "Georgia", serif;
+    line-height: 1.8em;
+    color: #333;
+  }
+  
+  /* Give headings their own font */
+  
+  h1, h2, h3, h4 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+  
+  /* Main content area */
+  
+  #content {
+    margin: 50px 40px;
+    padding: 20px;;
+    background: #abddec;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    min-width: 900px;
+    
+  }
+  
+  /* Header/footer boxes */
+  
+  .wideBox {
+    clear: both;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background: #ebedf2;
+    border: 1px solid #333;
+    min-width: 900px;
+
+  }
+  
+  .wideBox h1 {
+    font-weight: bold;
+    margin: 20px;
+    color: #666;
+    font-size: 1.5em;
+  }
+  
+  /* Slots for final card positions */
+  
+  #cardSlots {
+    margin: 50px auto 0 auto;
+    /* background: #ddf; */
+  }
+  
+  /* The initial pile of unsorted cards */
+  
+  #cardPile {
+    margin: 0 auto;
+    /* background: #ffd; */
+  }
+
+  #cardPile {
+    width: 950px;
+    height: 220px;
+    padding: 10px;
+    /* border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8); */
+  }
+
+  #cardSlots {
+    width: 950px;
+    height: 290px;
+    padding: 10px;
+    /* border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8); */
+  }
+
+  
+  /* Individual cards and slots */
+  
+  #cardSlots div, #cardPile div {
+    float: left;
+    /* left: 100px; */
+    width: 180px;
+    height: 180px;
+    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    /* border: 2px solid #333; */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin: 0 0 0 10px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* background: #fff; */
+  }
+  
+  #cardPile div{
+    margin: auto;
+    /* background: #ffd; */
+  }
+
+  #emptySlots div, #emptyPile div {
+    float: left;
+    width: 180px;
+    height: 180px;
+    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    /* border: 2px solid #333; */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    /* background: #fff; */
+  }
+  
+  #cardSlots div:first-child, #cardPile div:first-child {
+    margin-left: 0;
+  }
+  
+  #cardSlots div.hovered {
+    background: #aaa;
+  }
+  
+  /* #cardSlots div {
+    border-style: dashed;
+  } */
+  
+  #cardPile div {
+    /* background: rgb(223, 212, 215); */
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+  }
+  
+  #cardPile div.ui-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  }
+  
+  /* Individually coloured cards */
+  #card1.correct { background: rgb(196, 233, 137); }
+  #card1.incorrect { background: rgb(243, 69, 16); }
+
+  /* #card1.correct { background: red; }
+  #card2.correct { background: brown; }
+  #card3.correct { background: orange; }
+  #card4.correct { background: yellow; }
+  #card5.correct { background: green; }
+  #card6.correct { background: cyan; }
+  #card7.correct { background: blue; }
+  #card8.correct { background: indigo; }
+  #card9.correct { background: purple; }
+  #card10.correct { background: violet; } */
+  
+  
+  /* "You did it!" message */
+  #successMessage {
+    position: absolute;
+    left: auto;
+    right: auto; 
+    top: 20%;
+    width: 0;
+    height: 0;
+    z-index: 100;
+    background: #dfd;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    padding: 20px;
+  }  
+  /* "You fail!" message */
+  #failedMessage {
+    position: absolute;
+    /* left: 25%; */
+    left: auto;
+    right: auto; 
+    top: 20%;
+    width: 0;
+    height: 0;
+    z-index: 100;
+    background: rgb(240, 119, 97);
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    padding: 20px;
+  }    
+
+  .initMessage {
+    position: absolute;
+    left: 20%;
+    top: 200px;
+    width: 800px;
+    height: 600px;
+    z-index: 100;
+    background: #dfd;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    padding: 20px;
+  }  
+
+  #topRowMsg {
+    float: none;
+    width: 95%;
+    height: 60px;
+    padding: 15px;
+    padding-top: 0;
+    padding-bottom: 5px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background: #fff;
+  }
+
+  .initContMainDiv {
+    float: none;
+    width: 95%;
+    height: 450px;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    margin-top: 15px;
+  }
+  #leftTopColMsg {
+    float: left;
+    width: 45%;
+    height: 200px;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: auto;
+    background: rgb(238, 232, 196);
+  }
+  #leftBotColMsg {
+    float: left;
+    width: 45%;
+    height: 200px;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin-top: 10px; */
+    margin: auto;
+    margin-top: 15px;
+    background: #abcbf5;
+  }
+  #rightTopColMsg {
+    float: right;
+    width: 45%;
+    height: 200px;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin-top: 10px; */
+    margin: auto;
+    background: 	#ec9b9b;
+  }
+  #rightBotColMsg {
+    float: right;
+    width: 45%;
+    height: 200px;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin-top: 10px; */
+    margin: auto;
+    margin-top: 15px;
+    background: rgb(177, 236, 231);
+  }
+
+  #backgroundDiv {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    float: none;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.71);
+  }
