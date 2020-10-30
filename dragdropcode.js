@@ -78,22 +78,22 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">', 
+                            img:'<img src="img/JustEmail106.png" alt="RegularEmail" width="180" height="180">', 
                             txt:'<h3>Copy To USB Key</h3>'
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">', 
+                            img:'<img src="img/gmail-encryption-Lock-large.jpg" alt="gmail-encryption-Lock-large" width="180" height="180">', 
                             txt:'<h3>Carry in a briefcase</h3>' 
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/pendrive-PassCode_USBKey.png" alt="pendrive-PassCode_USBKey" width="180" height="180">', 
+                            img:'<img src="img/locked_spemail-logo.png" alt="locked_spemail-logo" width="180" height="180">', 
                             txt:'<h3>Should Have Encryption</h3>'
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">', 
+                            img:'<img src="img/Email-Encryption-Enterprise.png" alt="Email-Encryption-Enterprise" width="180" height="180">', 
                             txt:'<h3>MUST Use Encryption Software</h3>' 
                         }
                     ]
@@ -107,11 +107,11 @@
                     [
                         {
                             id: 1, 
-                            img:'<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">'
+                            img:'<img src="img/newsPaperBig.png" alt="newsPaperBig" width="180" height="160">'
                         },
                         {
                             id: 2, 
-                            img:'<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">'
+                            img:'<img src="img/document-background.png" alt="document-background" width="180" height="160">'
                         },
                         { 
                             id: 3, 
@@ -126,22 +126,22 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">', 
+                            img:'<img src="img/cloud-storage.png" alt="cloud-storage" width="180" height="180">', 
                             txt:'<h3>Copy To USB Key</h3>'
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">', 
+                            img:'<img src="img/MS-Teams-logo.png" alt="MS-Teams-logo" width="180" height="180">', 
                             txt:'<h3>Carry in a briefcase</h3>' 
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/pendrive-PassCode_USBKey.png" alt="pendrive-PassCode_USBKey" width="180" height="180">', 
+                            img:'<img src="img/TeamsLogorev.png" alt="TeamsLogorev" width="180" height="180">', 
                             txt:'<h3>Should Have Encryption</h3>'
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">', 
+                            img:'<img src="img/nextCloud.png" alt="nextCloud" width="180" height="180">', 
                             txt:'<h3>MUST Use Encryption Software</h3>' 
                         }
                     ]
@@ -204,56 +204,69 @@
     // Create the pile of shuffled cards
     //$('<div>' + '' + '</div>').data( 'number', 10 ).attr( 'id', 'emptyCard'+0 ).appendTo( '#cardPile' ); // empty slot
     //$('<div>' + '' + '</div>').data( 'number', 11 ).attr( 'id', 'emptyCard'+1 ).appendTo( '#cardPile' ); // empty slot
-    $('<div>' + docImg[0].img + '</div>').data( 'number', docImg[0].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
-        containment: '#content',
-        stack: '#cardPile div',
-        cursor: 'move',
-        revert: true
+    for (let k = 0; k < maxItems; k++) {
+        $('<div>' + docImg[k].img + '</div>').data( 'number', docImg[k].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+            containment: '#content',
+            stack: '#cardPile div',
+            cursor: 'move',
+            revert: true
+            } );
+        $('<div>' + imgDest[k].img + imgDest[k].txt + '</div>').data( 'number', imgDest[k].id ).appendTo( '#cardSlots' ).droppable( {
+        accept: '#cardPile div',
+        hoverClass: 'hovered',
+        drop: handleCardDrop
         } );
-    $('<div>' + docImg[1].img + '</div>').data( 'number', docImg[1].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
-        containment: '#content',
-        stack: '#cardPile div',
-        cursor: 'move',
-        revert: true
-        } );
-    $('<div>' + docImg[2].img + '</div>').data( 'number', docImg[2].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
-        containment: '#content',
-        stack: '#cardPile div',
-        cursor: 'move',
-        revert: true
-        } );        
-    $('<div>' + docImg[3].img + '</div>').data( 'number', docImg[3].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
-        containment: '#content',
-        stack: '#cardPile div',
-        cursor: 'move',
-        revert: true
-        } );
+    }
+    // $('<div>' + docImg[0].img + '</div>').data( 'number', docImg[0].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+    //     containment: '#content',
+    //     stack: '#cardPile div',
+    //     cursor: 'move',
+    //     revert: true
+    //     } );
+    // $('<div>' + docImg[1].img + '</div>').data( 'number', docImg[1].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+    //     containment: '#content',
+    //     stack: '#cardPile div',
+    //     cursor: 'move',
+    //     revert: true
+    //     } );
+    // $('<div>' + docImg[2].img + '</div>').data( 'number', docImg[2].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+    //     containment: '#content',
+    //     stack: '#cardPile div',
+    //     cursor: 'move',
+    //     revert: true
+    //     } );        
+    // $('<div>' + docImg[3].img + '</div>').data( 'number', docImg[3].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+    //     containment: '#content',
+    //     stack: '#cardPile div',
+    //     cursor: 'move',
+    //     revert: true
+    //     } );
     
         //$('<div>' + '' + '</div>').data( 'number', 12 ).attr( 'id', 'emptyCard'+2 ).appendTo( '#cardPile' ); // empty slot
     //$('<div>' + '' + '</div>').data( 'number', 13 ).attr( 'id', 'emptyCard'+3 ).appendTo( '#cardPile' ); // empty slot  
 
     // Create the card slots
     //$('<div>' + ' ' + '</div>').data( 'number', 100 ).appendTo( '#cardSlots' );  
-    $('<div>' + imgDest[0].img + imgDest[0].txt + '</div>').data( 'number', imgDest[0].id ).appendTo( '#cardSlots' ).droppable( {
-        accept: '#cardPile div',
-        hoverClass: 'hovered',
-        drop: handleCardDrop
-        } );
-    $('<div>' + imgDest[1].img + imgDest[1].txt + '</div>').data( 'number', imgDest[1].id ).appendTo( '#cardSlots' ).droppable( {
-        accept: '#cardPile div',
-        hoverClass: 'hovered',
-        drop: handleCardDrop
-        } );
-    $('<div>' + imgDest[2].img + imgDest[2].txt + '</div>').data( 'number', imgDest[2].id ).appendTo( '#cardSlots' ).droppable( {
-        accept: '#cardPile div',
-        hoverClass: 'hovered',
-        drop: handleCardDrop
-        } );
-    $('<div>' + imgDest[3].img + imgDest[3].txt + '</div>').data( 'number', imgDest[3].id ).appendTo( '#cardSlots' ).droppable( {
-        accept: '#cardPile div',
-        hoverClass: 'hovered',
-        drop: handleCardDrop
-        } );
+    // $('<div>' + imgDest[0].img + imgDest[0].txt + '</div>').data( 'number', imgDest[0].id ).appendTo( '#cardSlots' ).droppable( {
+    //     accept: '#cardPile div',
+    //     hoverClass: 'hovered',
+    //     drop: handleCardDrop
+    //     } );
+    // $('<div>' + imgDest[1].img + imgDest[1].txt + '</div>').data( 'number', imgDest[1].id ).appendTo( '#cardSlots' ).droppable( {
+    //     accept: '#cardPile div',
+    //     hoverClass: 'hovered',
+    //     drop: handleCardDrop
+    //     } );
+    // $('<div>' + imgDest[2].img + imgDest[2].txt + '</div>').data( 'number', imgDest[2].id ).appendTo( '#cardSlots' ).droppable( {
+    //     accept: '#cardPile div',
+    //     hoverClass: 'hovered',
+    //     drop: handleCardDrop
+    //     } );
+    // $('<div>' + imgDest[3].img + imgDest[3].txt + '</div>').data( 'number', imgDest[3].id ).appendTo( '#cardSlots' ).droppable( {
+    //     accept: '#cardPile div',
+    //     hoverClass: 'hovered',
+    //     drop: handleCardDrop
+    //     } );
 
     //$('<div>' + ' ' + '</div>').data( 'number', 103 ).appendTo( '#cardSlots' );    
     
