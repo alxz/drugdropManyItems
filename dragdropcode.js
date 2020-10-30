@@ -16,15 +16,17 @@
                 [
                     '<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">',
                     '<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">',            
-                    '<img src="img/Aegis-password-protectUSB-drive.png" alt="Password-protectUSB-drive" width="180" height="180">',
+                    '<img src="img/pendrive-PassCode_USBKey.png" alt="pendrive-PassCode_USBKey" width="180" height="180">',
                     '<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">',
+                ],
+                'txtDest': 
+                [
+                    '<h3>Copy To USB Key</h3>',
+                    '<h3>Carry in a briefcase</h3>',            
+                    '<h3>Should Have Encryption</h3>',
+                    '<h3>MUST Use Encryption Software</h3>',
                 ]
-            },    
-            
-            'txtDest1' :  '<h3>Copy To USB Key</h3>',
-            'txtDest4' :  '<h3>Carry in a briefcase</h3>',
-            'txtDest2' :  '<h3>Should Have Encryption</h3>',
-            'txtDest3' :  '<h3>MUST Have Encryption</h3>',
+            }, 
             'backgColor' : '#ec9b9b',
             'correctDest1' : 1,
             'correctDest2' : 4,
@@ -89,14 +91,21 @@
 
     function init() {
         //set initial images:
+        var gameObjArr = [];
         var docImg = []; 
         var imgDest = [];
+        var txtDest = [];
         for (let i = 0; i < arrObjects[objectId].game1.imgSrc.length; i++) {
             docImg[i] = arrObjects[objectId].game1.imgSrc[i];
+            
         }
         for (let i = 0; i < arrObjects[objectId].game1.imgDest.length; i++) {
             imgDest[i] = arrObjects[objectId].game1.imgDest[i];
         }
+        for (let i = 0; i < arrObjects[objectId].game1.txtDest.length; i++) {
+            txtDest[i] = arrObjects[objectId].game1.txtDest[i];
+        };
+        
         // var docImg1 = arrObjects[objectId].imgSrc1;
         // var docImg2 = arrObjects[objectId].imgSrc2;
         // var docImg3 = arrObjects[objectId].imgSrc3;
@@ -109,10 +118,10 @@
         var correctDestId2 = arrObjects[objectId].correctDest2;
         var correctDestId3 = arrObjects[objectId].correctDest3;
         var correctDestId4 = arrObjects[objectId].correctDest4;
-        var txtDest1 = arrObjects[objectId].txtDest1;
-        var txtDest2 = arrObjects[objectId].txtDest2;
-        var txtDest3 = arrObjects[objectId].txtDest3;
-        var txtDest4 = arrObjects[objectId].txtDest4;
+        // var txtDest1 = arrObjects[objectId].txtDest1;
+        // var txtDest2 = arrObjects[objectId].txtDest2;
+        // var txtDest3 = arrObjects[objectId].txtDest3;
+        // var txtDest4 = arrObjects[objectId].txtDest4;
         var backColor = arrObjects[objectId].backgColor;
         // for (let j=0; j<=3; j++) {
 
@@ -178,22 +187,22 @@
 
     // Create the card slots
     //$('<div>' + ' ' + '</div>').data( 'number', 100 ).appendTo( '#cardSlots' );  
-    $('<div>' + imgDest[0] + txtDest1 + '</div>').data( 'number', 1 ).appendTo( '#cardSlots' ).droppable( {
+    $('<div>' + imgDest[0] + txtDest[0] + '</div>').data( 'number', 1 ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
         } );
-    $('<div>' + imgDest[1] + txtDest2 + '</div>').data( 'number', 2 ).appendTo( '#cardSlots' ).droppable( {
+    $('<div>' + imgDest[1] + txtDest[1] + '</div>').data( 'number', 2 ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
         } );
-    $('<div>' + imgDest[2] + txtDest3 + '</div>').data( 'number', 3 ).appendTo( '#cardSlots' ).droppable( {
+    $('<div>' + imgDest[2] + txtDest[2] + '</div>').data( 'number', 3 ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
         } );
-    $('<div>' + imgDest[3] + txtDest4 + '</div>').data( 'number', 4 ).appendTo( '#cardSlots' ).droppable( {
+    $('<div>' + imgDest[3] + txtDest[3] + '</div>').data( 'number', 4 ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
@@ -317,3 +326,21 @@
         $('#backgroundDiv').hide();  
       }
 
+      function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+      
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+      
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+      
+          // And swap it with the current element.
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+      
+        return array;
+      }
