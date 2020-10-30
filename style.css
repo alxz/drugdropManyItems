@@ -133,6 +133,21 @@ body {
     margin: 0 0 0 10px;
     /* background: #fff; */
   }
+
+  #gameTextDiv {
+    width: 800px;
+    height: 160px;
+    padding: 10px;
+    border: 1px solid #333;
+    /* border: 2px solid #333; */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin: 0 0 0 10px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* background: #fff; */
+  }
   
   #cardSlots div:first-child, #cardPile div:first-child {
     margin-left: 0;

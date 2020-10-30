@@ -7,6 +7,7 @@
         {
             'game': {
                 'maxItems': 4,
+                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the </h2><h2>recommendations on storage or transportation of the kind of documents.</h2>',
                 'imgSrc': 
                     [
                         {
@@ -55,6 +56,7 @@
         {
             'game': {
                 'maxItems': 4,
+                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the </h2><h2>recommendations on sending of the kind of documents via email.</h2>',
                 'imgSrc': 
                     [
                         {
@@ -79,30 +81,31 @@
                         { 
                             id: 1, 
                             img:'<img src="img/JustEmail106.png" alt="RegularEmail" width="180" height="180">', 
-                            txt:'<h3>Copy To USB Key</h3>'
+                            txt:'<h3>Send by any simple Email Service</h3>'
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/gmail-encryption-Lock-large.jpg" alt="gmail-encryption-Lock-large" width="180" height="180">', 
-                            txt:'<h3>Carry in a briefcase</h3>' 
+                            txt:'<h3>Use corporate Outlook or Gmail</h3>' 
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/locked_spemail-logo.png" alt="locked_spemail-logo" width="180" height="180">', 
-                            txt:'<h3>Should Have Encryption</h3>'
+                            txt:'<h3>Email Serivce With Cryptography</h3>'
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/Email-Encryption-Enterprise.png" alt="Email-Encryption-Enterprise" width="180" height="180">', 
-                            txt:'<h3>MUST Use Encryption Software</h3>' 
+                            img:'<img src="img/Proton_e2e-encryp.png" alt="Proton_e2e-encryp" width="180" height="180">', 
+                            txt:'<h3>ProtonMail or Other With End-To-End Encryption</h3>' 
                         }
                     ]
             }, 
-            'backgColor' : '#ec9b9b'
+            'backgColor' : '#FFF8DC'
         },
         {
             'game': {
                 'maxItems': 4,
+                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the </h2><h2>way to share the different kind of documents.</h2>',
                 'imgSrc': 
                     [
                         {
@@ -146,7 +149,7 @@
                         }
                     ]
             }, 
-            'backgColor' : '#ec9b9b'
+            'backgColor' : '#98F5FF'
         }        
     ];
 
@@ -154,7 +157,7 @@
         //set initial images:
         var docImg = []; //to store images for items to drag-n-drop
         var imgDest = []; //to store placeholders where to drop
-        
+        var gameText = arrObjects[objectId].game.gameTxt;
         var maxItems = arrObjects[objectId].game.maxItems;
         for (let i = 0; i < arrObjects[objectId].game.imgSrc.length; i++) {
             docImg.push (arrObjects[objectId].game.imgSrc[i]);
@@ -211,6 +214,7 @@
             cursor: 'move',
             revert: true
             } );
+        $("#gameTextDiv").html(gameText);            
         $('<div>' + imgDest[k].img + imgDest[k].txt + '</div>').data( 'number', imgDest[k].id ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
