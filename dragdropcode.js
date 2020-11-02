@@ -7,7 +7,7 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the </h2><h2>recommendations on storage or transportation of the kind of documents.</h2>',
+                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the recommendations on storage or transportation of the kind of documents.</h2>',
                 'imgSrc': 
                     [
                         {
@@ -31,23 +31,23 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="180">', 
-                            txt:'<h3>Copy To USB Key</h3>'
+                            img:'<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="160">', 
+                            txt:'Copy To USB Key'
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="180">', 
-                            txt:'<h3>Carry in a briefcase</h3>' 
+                            img:'<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="160">', 
+                            txt:'Carry in a briefcase' 
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/pendrive-PassCode_USBKey.png" alt="pendrive-PassCode_USBKey" width="180" height="180">', 
-                            txt:'<h3>Should Have Encryption</h3>'
+                            img:'<img src="img/pendrive-PassCode_USBKey.png" alt="pendrive-PassCode_USBKey" width="180" height="160">', 
+                            txt:'Should Have Encryption'
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="180">', 
-                            txt:'<h3>MUST Use Encryption Software</h3>' 
+                            img:'<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="160">', 
+                            txt:'MUST Use Encryption Software' 
                         }
                     ]
             }, 
@@ -56,7 +56,7 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the </h2><h2>recommendations on sending of the kind of documents via email.</h2>',
+                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the recommendations on sending of the kind of documents via email.</h2>',
                 'imgSrc': 
                     [
                         {
@@ -80,23 +80,23 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/JustEmail106.png" alt="RegularEmail" width="180" height="180">', 
-                            txt:'<h3>Send by any simple Email Service</h3>'
+                            img:'<img src="img/JustEmail106.png" alt="RegularEmail" width="160" height="140">', 
+                            txt:'Send by any simple Email Service'
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/gmail-encryption-Lock-large.jpg" alt="gmail-encryption-Lock-large" width="180" height="180">', 
-                            txt:'<h3>Use corporate Outlook or Gmail</h3>' 
+                            img:'<img src="img/gmail-encryption-Lock-large.jpg" alt="gmail-encryption-Lock-large" width="160" height="140">', 
+                            txt:'Use corporate Outlook or Gmail' 
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/locked_spemail-logo.png" alt="locked_spemail-logo" width="180" height="180">', 
-                            txt:'<h3>Email Serivce With Cryptography</h3>'
+                            img:'<img src="img/locked_spemail-logo.png" alt="locked_spemail-logo" width="160" height="140">', 
+                            txt:'Email Serivce With Cryptography'
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/Proton_e2e-encryp.png" alt="Proton_e2e-encryp" width="180" height="180">', 
-                            txt:'<h3>ProtonMail or Other With End-To-End Encryption</h3>' 
+                            img:'<img src="img/Proton_e2e-encryp.png" alt="Proton_e2e-encryp" width="160" height="140">', 
+                            txt:'ProtonMail or Other With End-To-End Encryption' 
                         }
                     ]
             }, 
@@ -105,7 +105,7 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the </h2><h2>way to share the different kind of documents.</h2>',
+                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the way to share the different kind of documents.</h2>',
                 'imgSrc': 
                     [
                         {
@@ -129,23 +129,23 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/cloud-storage.png" alt="cloud-storage" width="180" height="180">', 
-                            txt:'<h3>Store on any publick cloud service</h3>'
+                            img:'<img src="img/cloud-storage.png" alt="cloud-storage" width="180" height="160">', 
+                            txt:'Store on any publick cloud service'
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/MS-Teams-logo.png" alt="MS-Teams-logo" width="180" height="180">', 
-                            txt:'<h3>TEAMS or other corp shared storage</h3>' 
+                            img:'<img src="img/MS-Teams-logo.png" alt="MS-Teams-logo" width="180" height="160">', 
+                            txt:'TEAMS or other corp shared storage' 
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/TeamsLogorev.png" alt="TeamsLogorev" width="180" height="180">', 
-                            txt:'<h3>TEAMS Shared only for specific persons or groups</h3>'
+                            img:'<img src="img/TeamsLogorev.png" alt="TeamsLogorev" width="180" height="160">', 
+                            txt:'TEAMS Shared only for specific persons or groups'
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/nextCloud.png" alt="nextCloud" width="180" height="180">', 
-                            txt:'<h3>Corp NextCloud, cloud within MUHC encryption Canada/EU</h3>' 
+                            img:'<img src="img/nextCloud.png" alt="nextCloud" width="180" height="160">', 
+                            txt:'Corp NextCloud, cloud within MUHC encryption Canada/EU' 
                         }
                     ]
             }, 
@@ -214,8 +214,9 @@
             cursor: 'move',
             revert: true
             } );
-        $("#gameTextDiv").html(gameText);            
-        $('<div>' + imgDest[k].img + imgDest[k].txt + '</div>').data( 'number', imgDest[k].id ).appendTo( '#cardSlots' ).droppable( {
+        //$("#gameTextDiv").html(gameText);
+        $("#textMessage").html(gameText);     
+        $('<div>' + imgDest[k].img + '<h4 style="margin-top: -10px;">' + imgDest[k].txt + '</h4>' + '</div>').data( 'number', imgDest[k].id ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
@@ -369,6 +370,8 @@
         init();
         $("#selectGame").hide();  
         $('#backgroundDiv').hide();
+        $('#gameTextDiv').hide();
+        $('#imgTxtMessage').removeClass("textMessageEmail");
       }
       function clickTopRight() { 
         // $( init );  
@@ -376,6 +379,16 @@
         init();
         $("#selectGame").hide();
         $('#backgroundDiv').hide();
+        // $('#cardPileVertical').hide();
+        // $('#cardSlotsVertical').hide();
+        $('#cardPile').removeClass("cardPileVertical");
+        $('#cardSlots').removeClass("cardSlotsVertical");
+        $('#cardPile').addClass("cardPile");
+        $('#cardSlots').addClass("cardSlots");
+        $('#gameTextDiv').removeClass("gameTextVerticalDiv");
+        $('#gameTextDiv').addClass("gameTextHorizDiv");
+        $('#imgTxtMessage').addClass("textMessageFiles");
+        $('#textMessage').addClass("imgTxtClear");
       }
       function leftBotColMsg() { 
         // $( init );  
@@ -383,13 +396,34 @@
         init();
         $("#selectGame").hide();
         $('#backgroundDiv').hide();
+        // $('#cardPileVertical').show();
+        // $('#cardSlotsVertical').show();
+        $('#cardPile').removeClass("cardPile");
+        $('#cardSlots').removeClass("cardSlots");
+        $('#cardPile').addClass("cardPileVertical");
+        $('#cardSlots').addClass("cardSlotsVertical");
+        $('#gameTextDiv').removeClass("gameTextHorizDiv");
+        $('#gameTextDiv').addClass("gameTextVerticalDiv");
+        $('#textMessage').removeClass("imgTxtClear");
+        $('#imgTxtMessage').addClass("textMessageEmail");
+        
       }
       function rightBotColMsg() { 
         // $( init );  
         objectId=2;
         init();
         $("#selectGame").hide();
-        $('#backgroundDiv').hide();  
+        $('#backgroundDiv').hide(); 
+        // $('#cardPileVertical').hide();
+        // $('#cardSlotsVertical').hide(); 
+        $('#cardPile').removeClass("cardPileVertical");
+        $('#cardSlots').removeClass("cardSlotsVertical");
+        $('#cardPile').addClass("cardPile");
+        $('#cardSlots').addClass("cardSlots");
+        $('#gameTextDiv').removeClass("gameTextVerticalDiv");
+        $('#gameTextDiv').addClass("gameTextHorizDiv");
+        $('#imgTxtMessage').addClass("textMessageCloud");
+        $('#textMessage').addClass("imgTxtClear");
       }
 
       function shuffle(array) {
@@ -410,3 +444,6 @@
       
         return array;
       }
+function closeTheGame() {
+    init();
+}

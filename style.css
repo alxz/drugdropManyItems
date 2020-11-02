@@ -1,6 +1,6 @@
 /* Add some margin to the page and set a default font and colour */
 body {
-    margin: 30px;
+    margin: 20px;
     font-family: "Georgia", serif;
     line-height: 1.8em;
     color: #333;
@@ -14,8 +14,11 @@ body {
   
   /* Main content area */
   
-  #content {
-    margin: 50px 40px;
+  .gameContent {
+    height: 850px;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;;
     background: #abddec;
     text-align: center;
@@ -29,58 +32,39 @@ body {
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-    min-width: 900px;
-    
+    min-width: 1000px;
+    min-height: 850px;
   }
   
   /* Header/footer boxes */
   
   .wideBox {
     clear: both;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
-    margin: 10px;
     padding: 10px;
-    background: #ebedf2;
+    background: #e1f1df;
     border: 1px solid #333;
-    min-width: 900px;
+    min-width: 1000px;
 
   }
   
   .wideBox h1 {
     font-weight: bold;
-    margin: 20px;
-    color: #666;
+    margin: 10px;
+    color: rgb(138, 5, 138);
     font-size: 1.5em;
   }
   
   /* Slots for final card positions */
-  
-  #cardSlots {
+ 
+  .cardSlots {
     margin: 50px auto 0 auto;
     /* background: #ddf; */
-  }
-  
-  /* The initial pile of unsorted cards */
-  
-  #cardPile {
-    margin: 0 auto;
-    /* background: #ffd; */
-  }
-
-  #cardPile {
-    width: 950px;
-    height: 220px;
-    padding: 10px;
-    /* border: 2px solid #333;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-    box-shadow: 0 0 .3em rgba(0, 0, 0, .8); */
-  }
-
-  #cardSlots {
     width: 950px;
     height: 290px;
     padding: 10px;
@@ -92,15 +76,159 @@ body {
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8); */
   }
+  /* The initial pile of unsorted cards */
 
+  .cardPile {
+    margin: 0 auto;
+    /* background: #ffd; */
+    width: 920px;
+    height: 220px;
+    padding: 10px;
+    /* border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8); */
+  }
+
+  .gameTextHorizDiv {
+    clear: both;
+    float: inline-start;
+    width: 920px;
+    /* height: 160px; */
+    padding: 10px;
+    /* border: 1px solid #333; */
+    /* border: 2px solid #333; */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin: 0 0 0 10px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* background: #fff; */
+    min-width: 900px;
+  }
+  .gameTextVerticalDiv {
+    float: left;
+    width: 500px;
+    height: 820px;
+    /* border: 1px solid #333; */
+    /* background: rgb(235, 217, 179);  */
+    /* border: 2px solid #333; */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin: 0 0 0 10px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* background: #fff; */
+    min-width: 500px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    
+  }
+  .textMessage {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #333;
+    background: rgb(235, 217, 179); 
+    /* border: 2px solid #333; */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin: 0 0 0 10px; */
+  }
+
+  .textMessageEmail {
+    margin: 0px;
+    padding: 300px 40px 300px 40px;
+    /* border: 2px solid #333; */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin: 0 0 0 10px; */
+    background-image: url('img/png_Envelope.png');    
+    background-size:100% 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, left; 
+  }
+
+  .textMessageFiles {
+    margin: 0px;
+    padding: 60px 40px 60px 40px;
+    /* border: 2px solid #333; */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin: 0 0 0 10px; */
+    background-image: url('img/png_File.png');    
+    background-size: 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, left; 
+  }
+
+  .textMessageCloud {
+    margin: 0px;
+    padding: 40px 40px 40px 40px;
+    /* border: 2px solid #333; */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* margin: 0 0 0 10px; */
+    background-image: url('img/png_Cloud.png');    
+    background-size: 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, left; 
+  }
+
+  .imgTxtClear {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  .cardPileVertical {
+    float: left;
+    margin: 0 auto;
+    background: #ffd;
+    width: 200px;
+    height: 820px;
+    padding: 10px;
+    /* border: 2px solid #333; */
+    /* 
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8); */
+  }
+
+  .cardSlotsVertical {
+    float: left;
+    width: 200px;
+    height: 820px;
+    padding: 10px;
+    background: #ffd;    
+    /* border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8); */
+  }
   
   /* Individual cards and slots */
   
   #cardSlots div, #cardPile div {
     float: left;
     /* left: 100px; */
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     padding: 5px;
     padding-top: 5px;
     padding-bottom: 0;
@@ -121,8 +249,8 @@ body {
 
   #emptySlots div, #emptyPile div {
     float: left;
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     padding: 5px;
     padding-top: 5px;
     padding-bottom: 0;
@@ -134,21 +262,6 @@ body {
     /* background: #fff; */
   }
 
-  #gameTextDiv {
-    width: 800px;
-    height: 160px;
-    padding: 10px;
-    border: 1px solid #333;
-    /* border: 2px solid #333; */
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    /* margin: 0 0 0 10px; */
-    margin-left: auto;
-    margin-right: auto;
-    /* background: #fff; */
-  }
-  
   #cardSlots div:first-child, #cardPile div:first-child {
     margin-left: 0;
   }
