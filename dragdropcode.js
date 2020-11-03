@@ -1,13 +1,16 @@
 
     var correctCards = 0;
-    var objectId = 0;
+    var objectId = 0;    
     var uiObj = null;
+    var gameOne;
+    var gameTwo;
+    var gameThree;
     $( init );
     var arrObjects = [
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': 'Drag and drop the document of each kind to the placeholders respecting the recommendations on storage or transportation of the kind of documents.',
+                'gameTxt': 'Drag and drop the document of each kind to the placeholders according to the recommendations on the information type.',
                 'imgSrc': 
                     [
                         {
@@ -56,7 +59,7 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': 'Drag and drop the document of each kind to the placeholders respecting the recommendations on sending of the kind of documents via email.',
+                'gameTxt': 'Drag and drop the document of each kind to the placeholders according to the recommendations on the information type.',
                 'imgSrc': 
                     [
                         {
@@ -80,23 +83,23 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/JustEmail106.png" alt="RegularEmail" width="160" height="140">', 
-                            txt:'Send by any simple Email Service'
+                            img:'<img src="img/JustEmail.png" alt="RegularEmail" width="160" height="140">', 
+                            txt:'Send by Any Available Email Service'
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/gmail-encryption-Lock-large.jpg" alt="gmail-encryption-Lock-large" width="160" height="140">', 
-                            txt:'Use corporate Outlook or Gmail' 
+                            txt:'Use Corporate Outlook or Corporate Gmail' 
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/locked_spemail-logo.png" alt="locked_spemail-logo" width="160" height="140">', 
-                            txt:'Email Serivce With Cryptography'
+                            txt:'Email Serivce Allows Cryptography Plugin'
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/Proton_e2e-encryp.png" alt="Proton_e2e-encryp" width="160" height="140">', 
-                            txt:'ProtonMail or Other With End-To-End Encryption' 
+                            txt:'ProtonMail or Other MUST have End-To-End Encryption' 
                         }
                     ]
             }, 
@@ -105,16 +108,16 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': 'Drag and drop the document of each kind to the placeholders respecting the way to share the different kind of documents.',
+                'gameTxt': 'Drag and drop the document of each kind to the placeholders respecting the way to share the different type of information.',
                 'imgSrc': 
                     [
                         {
                             id: 1, 
-                            img:'<img src="img/newsPaperBig.png" alt="newsPaperBig" width="180" height="160">'
+                            img:'<img src="img/publicPapersGreen.png" alt="publicPapersGreen" width="180" height="160">'
                         },
                         {
                             id: 2, 
-                            img:'<img src="img/document-background.png" alt="document-background" width="180" height="160">'
+                            img:'<img src="img/restrictedPapersYellow.png" alt="RestrictedPapers" width="180" height="160">'
                         },
                         { 
                             id: 3, 
@@ -129,29 +132,31 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/cloud-storage.png" alt="cloud-storage" width="180" height="160">', 
-                            txt:'Store on any publick cloud service'
+                            img:'<img src="img/any-cloud.png" alt="cloud-storage" width="180" height="160">', 
+                            txt:'To ANY Public Cloud Service Accessible by Employees'
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/MS-Teams-logo.png" alt="MS-Teams-logo" width="180" height="160">', 
-                            txt:'TEAMS or other corp shared storage' 
+                            img:'<img src="img/MS-Teams-SharedStore.png" alt="MS-Teams-SharedStore" width="180" height="160">', 
+                            txt:'Corporate TEAMS or Shared Storage' 
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/TeamsLogorev.png" alt="TeamsLogorev" width="180" height="160">', 
-                            txt:'TEAMS Shared only for specific persons or groups'
+                            txt:'Corporate TEAMS Shared with Limited Access Only'
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/nextCloud.png" alt="nextCloud" width="180" height="160">', 
-                            txt:'Corp NextCloud, cloud within MUHC encryption Canada/EU' 
+                            img:'<img src="img/nextCloudShade.png" alt="nextCloud" width="180" height="160">', 
+                            txt:'MUHC Corporate NextCloud, allowed MUHC Encryption Hosted in Canada/EU' 
                         }
                     ]
             }, 
-            'backgColor' : '#98F5FF'
+            'backgColor' : '#CCCCFF'
         }        
     ];
+    
+    leftTopColMsg();
 
     function init() {
         //set initial images:
@@ -165,13 +170,13 @@
             //console.log("docImg[",i,"]: ",docImg[i]);             
         }
         docImg = shuffle(docImg);
-        console.log('docImg[]: ', docImg);
+        //console.log('docImg[]: ', docImg);
         for (let i = 0; i < arrObjects[objectId].game.imgDest.length; i++) {
             //imgDest[i] = arrObjects[objectId].game1.imgDest[i];
             imgDest.push (arrObjects[objectId].game.imgDest[i]);
         }
         imgDest = shuffle(imgDest);
-        console.log('imgDest[]: ', imgDest);
+        //console.log('imgDest[]: ', imgDest);
         var backColor = arrObjects[objectId].backgColor;
         // for (let j=0; j<=3; j++) {
 
@@ -288,8 +293,8 @@
 
     function handleCardDrop( event, ui ) {
         var slotNumber = $(this).data( 'number' );
-        var cardNumber = ui.draggable.data( 'number' );
-        console.log('slotNumber: ',slotNumber,', cardNumber: ',cardNumber);
+        var cardNumber = ui.draggable.data( 'number' );        
+        //console.log('slotNumber: ',slotNumber,', cardNumber: ',cardNumber);
         // If the card was dropped to the correct slot,
         // change the card colour, position it directly
         // on top of the slot, and prevent it being dragged
@@ -301,12 +306,12 @@
             ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
             ui.draggable.draggable( 'option', 'revert', false );
             correctCards++;
-            console.log('Correct: ui: ',ui);
+            //console.log('Correct: ui: ',ui);
         }  else {
             // if this is incorrect card dropped:
             ui.draggable.addClass( 'incorrect' );
             uiObj = ui;
-            console.log('Incorrect: uiObj: ',uiObj);
+            //console.log('Incorrect: uiObj: ',uiObj);
             //ui.draggable.draggable( 'disable' );
             //$(this).droppable( 'disable' );
             //ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
@@ -332,13 +337,8 @@
             height: '100px',
             opacity: 1
             } );
-            // parameters: 
-            //   left: '380px',
-            //   top: '200px',
-            //   width: '400px',
-            //   height: '100px',
-            //   opacity: 1
         }
+        checkGameState(objectId);
     }
 
     function clearWrongDrop() {
@@ -380,8 +380,6 @@
         init();
         $("#selectGame").hide();
         $('#backgroundDiv').hide();
-        // $('#cardPileVertical').hide();
-        // $('#cardSlotsVertical').hide();
         $('#cardPile').removeClass("cardPileVertical");
         $('#cardSlots').removeClass("cardSlotsVertical");
         $('#cardPile').addClass("cardPile");
@@ -397,8 +395,6 @@
         init();
         $("#selectGame").hide();
         $('#backgroundDiv').hide();
-        // $('#cardPileVertical').show();
-        // $('#cardSlotsVertical').show();
         $('#cardPile').removeClass("cardPile");
         $('#cardSlots').removeClass("cardSlots");
         $('#cardPile').addClass("cardPileVertical");
@@ -414,9 +410,7 @@
         objectId=2;
         init();
         $("#selectGame").hide();
-        $('#backgroundDiv').hide(); 
-        // $('#cardPileVertical').hide();
-        // $('#cardSlotsVertical').hide();         
+        $('#backgroundDiv').hide();     
         
         $('#cardPile').removeClass("cardPileVertical");
         $('#cardSlots').removeClass("cardSlotsVertical");
@@ -447,5 +441,78 @@
         return array;
       }
 function closeTheGame() {
+    checkGameState(objectId);
+
+    $('#cardPile').removeClass("cardPileVertical");
+    $('#cardSlots').removeClass("cardSlotsVertical");
+    $('#gameTextDiv').removeClass("gameTextVerticalDiv");
+    $('#imgTxtMessage').removeClass();
+    objectId=0;
     init();
+}
+
+function checkGameState (objId) {
+    var starsString = "" ; 
+    var oldScore = 0;
+    switch (objectId) {
+        case 0:
+            if ( gameOne === null || gameOne === undefined || typeof gameOne == "undefined") {
+                gameOne = {
+                    score : 0
+                };                     
+            }
+            oldScore = gameOne.score;
+            if (oldScore < correctCards ) {
+                gameOne = {
+                    score : correctCards
+                };
+            }
+            var element = document.getElementById("gameOne");
+            for (let i = 0; i < gameOne.score; i++) {
+                starsString += " " + "&#9733;";        
+            }
+            element.innerHTML = starsString;  
+            break;
+
+        case 1:
+            if ( gameTwo === null || gameTwo === undefined || typeof gameTwo == "undefined") {
+                gameTwo = {
+                    score : 0
+                };                     
+            }
+            oldScore = gameTwo.score;
+            if (oldScore < correctCards ) {
+                gameTwo = {
+                    score : correctCards
+                };
+            }   
+            var element = document.getElementById("gameTwo");
+            for (let i = 0; i < gameTwo.score; i++) {
+                starsString += " " + "&#9733;";       
+            }
+            element.innerHTML = starsString;            
+            break;    
+        case 2:
+            if ( gameThree === null || gameThree === undefined || typeof gameThree == "undefined") {
+                gameThree = {
+                    score : 0
+                };                     
+            }
+            oldScore = gameThree.score;
+            if (oldScore < correctCards ) {
+                gameThree = {
+                    score : correctCards
+                };
+            }   
+            var element = document.getElementById("gameThree");
+            for (let i = 0; i < gameThree.score; i++) {
+                starsString += " " + "&#9733;";        
+            }
+            element.innerHTML = starsString;
+
+        break;
+        default:
+            console.log("game State verification.... ");
+            break;
+    } 
 }
