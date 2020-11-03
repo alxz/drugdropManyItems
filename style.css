@@ -93,6 +93,7 @@ body {
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8); */
   }
 
+
   .gameTextHorizDiv {
     clear: both;
     float: inline-start;
@@ -158,7 +159,7 @@ body {
 
   .textMessageFiles {
     margin: 0px;
-    padding: 60px 40px 60px 40px;
+    padding: 60px 20px 60px 20px;
     /* border: 2px solid #333; */
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -347,6 +348,10 @@ body {
     position: absolute;
     left: 20%;
     top: 200px;
+    /* clear: both;
+    float: none; */
+    margin-left: auto;
+    margin-right: auto;
     width: 800px;
     height: 600px;
     z-index: 100;

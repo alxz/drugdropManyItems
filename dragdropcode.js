@@ -7,7 +7,7 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the recommendations on storage or transportation of the kind of documents.</h2>',
+                'gameTxt': 'Drag and drop the document of each kind to the placeholders respecting the recommendations on storage or transportation of the kind of documents.',
                 'imgSrc': 
                     [
                         {
@@ -56,7 +56,7 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the recommendations on sending of the kind of documents via email.</h2>',
+                'gameTxt': 'Drag and drop the document of each kind to the placeholders respecting the recommendations on sending of the kind of documents via email.',
                 'imgSrc': 
                     [
                         {
@@ -105,7 +105,7 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': '<h2>Drag and drop the document of each kind to the placeholders respecting the way to share the different kind of documents.</h2>',
+                'gameTxt': 'Drag and drop the document of each kind to the placeholders respecting the way to share the different kind of documents.',
                 'imgSrc': 
                     [
                         {
@@ -215,13 +215,14 @@
             revert: true
             } );
         //$("#gameTextDiv").html(gameText);
-        $("#textMessage").html(gameText);     
-        $('<div>' + imgDest[k].img + '<h4 style="margin-top: -10px;">' + imgDest[k].txt + '</h4>' + '</div>').data( 'number', imgDest[k].id ).appendTo( '#cardSlots' ).droppable( {
+        $("#textMessage").html('<h4>'+gameText+'</h4>');     
+        $('<div>' + imgDest[k].img + '<h4 style="margin-top: -10px;">' + imgDest[k].txt + '</h4></div>').data( 'number', imgDest[k].id ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
         } );
     }
+    
     // $('<div>' + docImg[0].img + '</div>').data( 'number', docImg[0].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
     //     containment: '#content',
     //     stack: '#cardPile div',
@@ -415,7 +416,8 @@
         $("#selectGame").hide();
         $('#backgroundDiv').hide(); 
         // $('#cardPileVertical').hide();
-        // $('#cardSlotsVertical').hide(); 
+        // $('#cardSlotsVertical').hide();         
+        
         $('#cardPile').removeClass("cardPileVertical");
         $('#cardSlots').removeClass("cardSlotsVertical");
         $('#cardPile').addClass("cardPile");
