@@ -4,7 +4,7 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     line-height: 1.8em;
     color: #333;
-    background-image: url('img/numericBckgrd.jpg');    
+    background-image: url('img/numericBckgrd.png');    
     background-size: 100% 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: right, left; 
@@ -504,7 +504,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgb(0,0,0,0.71);
-    background-image: url('img/numericBckgrd.jpg');    
+    background-image: url('img/numericBckgrd.png');    
     background-size: 100% 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: right, left; 
@@ -527,7 +527,7 @@ body {
     text-align: center;
     font-weight: bold;
     /* text-shadow: 1px 1px #370438; */
-    color: rgb(233, 13, 13);
+    color: rgb(35, 0, 160);
     /* color: rgb(138, 5, 138); */
     font-size: 1.5em;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;

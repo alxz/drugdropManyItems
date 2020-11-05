@@ -6,6 +6,10 @@
     var gameTwo;
     var gameThree;
     var isFlip = false;
+    var publicDocImg = "img/PublicDocsAll.png";
+    var confDocImg = "img/ConfidentialDocsAll.png";
+    var restrDocImg = "img/RestrictedDocsAll.png";
+    var sensDocImg = "img/SensitiveDocsAll.png";
     $( init );
     var arrObjects = [
         {
@@ -16,22 +20,22 @@
                     [
                         {
                             id: 1, 
-                            img:'<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="150" height="200">',
                             level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="150" height="200">',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="140" height="200">',
                             level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="200">',
                             level: 4
                         }                        
                     ],
@@ -73,22 +77,22 @@
                     [
                         {
                             id: 1, 
-                            img:'<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="150" height="200">',
                             level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="150" height="200">',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="140" height="200">',
                             level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="200">',
                             level: 4
                         }                        
                     ],
@@ -130,22 +134,22 @@
                     [
                         {
                             id: 1, 
-                            img:'<img src="img/publicPapersGreen.png" alt="publicPapersGreen" width="180" height="160">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="150" height="200">',
                             level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="img/restrictedPapersYellow.png" alt="RestrictedPapers" width="180" height="160">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="150" height="200">',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="140" height="200">',
                             level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="200">',
                             level: 4
                         }                        
                     ],
@@ -511,6 +515,7 @@ function closeTheGame() {
 
 function checkGameState (objId) {
     var starsString = "" ; 
+    var blankStarString = "" ;
     var oldScore = 0;
     switch (objectId) {
         case 0:
@@ -527,9 +532,12 @@ function checkGameState (objId) {
             }
             var element = document.getElementById("gameOne");
             for (let i = 0; i < gameOne.score; i++) {
-                starsString += " " + "&#9733;";        
+                starsString += "<span class='class-starYellow'>&#9733; </span>";        
             }
-            element.innerHTML = starsString;  
+            for (let i = 0; i < (4 - gameOne.score); i++) {
+                blankStarString +="<span class='class-starWhite'>&#9733; </span>";
+            }
+            element.innerHTML = starsString + blankStarString;  
             break;
 
         case 1:
@@ -546,9 +554,12 @@ function checkGameState (objId) {
             }   
             var element = document.getElementById("gameTwo");
             for (let i = 0; i < gameTwo.score; i++) {
-                starsString += " " + "&#9733;";       
+                starsString += "<span class='class-starYellow'>&#9733; </span>";       
             }
-            element.innerHTML = starsString;            
+            for (let i = 0; i < (4 - gameTwo.score); i++) {
+                blankStarString +="<span class='class-starWhite'>&#9733; </span>";
+            }            
+            element.innerHTML = starsString + blankStarString;            
             break;    
         case 2:
             if ( gameThree === null || gameThree === undefined || typeof gameThree == "undefined") {
@@ -564,9 +575,12 @@ function checkGameState (objId) {
             }   
             var element = document.getElementById("gameThree");
             for (let i = 0; i < gameThree.score; i++) {
-                starsString += " " + "&#9733;";        
+                starsString += "<span class='class-starYellow'>&#9733; </span>";        
             }
-            element.innerHTML = starsString;
+            for (let i = 0; i < (4 - gameThree.score); i++) {
+                blankStarString +="<span class='class-starWhite'>&#9733; </span>";
+            }  
+            element.innerHTML = starsString + blankStarString; 
 
         break;
         default:
