@@ -15,17 +15,17 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': 'Drag and drop the document of each kind to the placeholders according to the recommendations on the information type.',
+                'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards)',
                 'imgSrc': 
                     [
                         {
                             id: 1, 
-                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="150" height="200">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="140" height="200">',
                             level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="150" height="200">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="140" height="200">',
                             level: 2
                         },
                         { 
@@ -35,7 +35,7 @@
                         },
                         {
                             id: 4,
-                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="200">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="140" height="200">',
                             level: 4
                         }                        
                     ],
@@ -43,26 +43,26 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="160">', 
-                            txt:'Copy To USB Key',
+                            img:'<img src="img/frefDocImgFileUSB.png" alt="McGillUSBKey" width="180" height="160">', 
+                            txt:'USB Key',
                             level: 1
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="160">', 
-                            txt:'Carry in a briefcase' ,
+                            img:'<img src="img/frefDocImgFileBriefCase.png" alt="Briefcase" width="180" height="160">', 
+                            txt:'In a Briefcase' ,
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/pendrive-PassCode_USBKey.png" alt="pendrive-PassCode_USBKey" width="180" height="160">', 
-                            txt:'Should Have Encryption',
+                            img:'<img src="img/frefDocImgFileEncryptUSBSW.png" alt="FileEncryptUSBSW" width="180" height="160">', 
+                            txt:'Information Has Encryption',
                             level: 3
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="160">', 
-                            txt:'MUST Use Encryption Software',
+                            img:'<img src="img/frefDocImgFileDiskEncryptUSBSW.png" alt="small-fireproof-safe" width="180" height="160">', 
+                            txt:'Must Have Encryption Software',
                             level: 4
                         }
                     ]
@@ -72,17 +72,17 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': 'Drag and drop the document of each kind to the placeholders according to the recommendations on the information type.',
+                'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards)',
                 'imgSrc': 
                     [
                         {
                             id: 1, 
-                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="150" height="200">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="140" height="200">',
                             level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="150" height="200">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="140" height="200">',
                             level: 2
                         },
                         { 
@@ -92,7 +92,7 @@
                         },
                         {
                             id: 4,
-                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="200">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="140" height="200">',
                             level: 4
                         }                        
                     ],
@@ -100,26 +100,26 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/JustEmail.png" alt="RegularEmail" width="160" height="140">', 
-                            txt:'Send by Any Available Email Service',
+                            img:'<img src="img/refDoc_EmailANY.png" alt="RegularEmail" width="150" height="140">', 
+                            txt:'Any Available Email Service',
                             level: 1
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/gmail-encryption-Lock-large.jpg" alt="gmail-encryption-Lock-large" width="160" height="140">', 
-                            txt:'Use Corporate Outlook or Corporate Gmail',
+                            img:'<img src="img/refDoc_EmailMSOutlook.png" alt="microsoft-outlook-logo.png" width="150" height="140">', 
+                            txt:'MUHC Corporate Email Service',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/locked_spemail-logo.png" alt="locked_spemail-logo" width="160" height="140">', 
-                            txt:'Email Serivce Allows Cryptography Plugin',
+                            img:'<img src="img/refDoc_EmailOpenPGPProtonEtc.png" alt="locked_spemail-logo" width="150" height="140">', 
+                            txt:'Email Serivce with a Cryptography Plugin',
                             level: 3
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/Proton_e2e-encryp.png" alt="Proton_e2e-encryp" width="160" height="140">', 
-                            txt:'ProtonMail or Other MUST have End-To-End Encryption',
+                            img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="150" height="140">', 
+                            txt:'ProtonMail or Other End-To-End Encrypted Email Service',
                             level: 4
                         }
                     ]
@@ -129,17 +129,17 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': 'Drag and drop the document of each kind to the placeholders respecting the way to share the different type of information.',
+                'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards)',
                 'imgSrc': 
                     [
                         {
                             id: 1, 
-                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="150" height="200">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="140" height="200">',
                             level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="150" height="200">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="140" height="200">',
                             level: 2
                         },
                         { 
@@ -149,7 +149,7 @@
                         },
                         {
                             id: 4,
-                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="200">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="140" height="200">',
                             level: 4
                         }                        
                     ],
@@ -157,26 +157,26 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/any-cloud.png" alt="cloud-storage" width="180" height="160">', 
-                            txt:'To ANY Public Cloud Service Accessible by Employees',
+                            img:'<img src="img/refDoc_CloudANY.png" alt="cloud-storage" width="150" height="150">', 
+                            txt:'ANY Cloud Server Accessible by Employees',
                             level: 1
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/MS-Teams-SharedStore.png" alt="MS-Teams-SharedStore" width="180" height="160">', 
-                            txt:'Corporate TEAMS or Shared Storage',
+                            img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="150" height="150">', 
+                            txt:'MUHC Corporate Cloud',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/TeamsLogorev.png" alt="TeamsLogorev" width="180" height="160">', 
-                            txt:'Corporate TEAMS Shared with Limited Access Only',
+                            img:'<img src="img/refDoc_CloudConfidential.png" alt="refDoc_CloudConfidential" width="150" height="150">', 
+                            txt:'Any Cloud Hosted in Canada or EU (encrypting the files on servers)',
                             level: 3
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/nextCloudShade.png" alt="nextCloud" width="180" height="160">', 
-                            txt:'MUHC Corporate NextCloud, allowed MUHC Encryption Hosted in Canada/EU',
+                            img:'<img src="img/refDoc_CloudSensitiveEncrNEXTCloud.png" alt="nextCloud" width="150" height="150">', 
+                            txt:'MUHC Private Cloud',
                             level: 4
                         }
                     ]

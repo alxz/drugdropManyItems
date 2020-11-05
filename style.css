@@ -6,7 +6,7 @@ body {
     color: #333;
     background-image: url('img/numericBckgrd.png');    
     background-size: 100% 100%;
-    background-repeat: no-repeat, no-repeat;
+    /* background-repeat: no-repeat, no-repeat; */
     background-position: right, left; 
   }
   
@@ -29,7 +29,8 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    border: 2px solid #333;
+    /* border: 2px solid #333; */
+    border: 3px double #FFF;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -39,35 +40,7 @@ body {
     min-width: 1000px;
     min-height: 850px;
   }
-  
-  /* Header/footer boxes */
-  
-  .wideBox {
-    clear: both;
-    width: 980px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    padding: 10px;
-    background: #e1f1df;
-    border: 1px solid #333;
-    min-width: 1000px;
-    border: 2px solid #333;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    /* text-shadow: 1px 1px #FC00FF; */
-  }
-  
-  .wideBox h1 {
-    font-weight: bold;
-    margin: 10px;
-    color: rgb(138, 5, 138);
-    font-size: 1.5em;
-  }
-  
+
   /* Slots for final card positions */
  
   .cardSlots {
@@ -391,8 +364,10 @@ body {
     height: 600px;
     z-index: 100;
     /* background: #dfd; */
-    background: rgb(255, 255, 255);
-    border: 2px solid #333;
+    /* background: rgb(170, 170, 170); */
+    background: rgb(230, 230, 230);
+    /* border: 2px solid #333; */
+    border: 5px double #FFF;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -506,7 +481,7 @@ body {
     background: rgb(0,0,0,0.71);
     background-image: url('img/numericBckgrd.png');    
     background-size: 100% 100%;
-    background-repeat: no-repeat, no-repeat;
+    /* background-repeat: no-repeat, no-repeat; */
     background-position: right, left; 
     z-index: 100;
   }
@@ -546,4 +521,55 @@ body {
   .class-starRed {
     color: red;
     text-shadow: 1px 1px #370438;
+  }
+
+    /* Header/footer boxes */
+  
+    .wideBox {
+      clear: both;
+      width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      padding: 10px;
+      background: #e1f1df;      
+      min-width: 1000px;
+      border: 2px solid #FFF;
+      /* border: 2px solid #333; */
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      /* text-shadow: 1px 1px #FC00FF; */
+    }
+    
+    .wideBox h1 {
+      font-weight: bold;
+      margin: 10px;
+      color: rgb(3, 2, 3);
+      font-size: 1.5em;
+    }
+    
+  .class-closeX {
+    position: absolute;
+    top: 30px;
+    left: 70%;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    /* background-image: url('img/closeIconRound.png');   */
+    background-image: url('img/closeIconRoundSquare.png');  
+    background-size: 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, left; 
+  }
+
+  .class-textMsg h1 {    
+      font-weight: bold;
+      color: rgb(3, 2, 3);
+      font-size: 1.5em;
+      /* background: #e1f1df; */
   }
