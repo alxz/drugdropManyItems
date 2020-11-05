@@ -5,6 +5,7 @@
     var gameOne;
     var gameTwo;
     var gameThree;
+    var isFlip = false;
     $( init );
     var arrObjects = [
         {
@@ -15,19 +16,23 @@
                     [
                         {
                             id: 1, 
-                            img:'<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">'
+                            img:'<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
+                            level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">'
+                            img:'<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
+                            level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">'
+                            img:'<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+                            level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">'
+                            img:'<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
+                            level: 4
                         }                        
                     ],
                 'imgDest': 
@@ -35,22 +40,26 @@
                         { 
                             id: 1, 
                             img:'<img src="img/McGillUSBKey.png" alt="McGillUSBKey" width="180" height="160">', 
-                            txt:'Copy To USB Key'
+                            txt:'Copy To USB Key',
+                            level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/suitcase-clip-art-briefcase.png" alt="Briefcase" width="180" height="160">', 
-                            txt:'Carry in a briefcase' 
+                            txt:'Carry in a briefcase' ,
+                            level: 2
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/pendrive-PassCode_USBKey.png" alt="pendrive-PassCode_USBKey" width="180" height="160">', 
-                            txt:'Should Have Encryption'
+                            txt:'Should Have Encryption',
+                            level: 3
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/small-fireproof-safe.png" alt="small-fireproof-safe" width="180" height="160">', 
-                            txt:'MUST Use Encryption Software' 
+                            txt:'MUST Use Encryption Software',
+                            level: 4
                         }
                     ]
             }, 
@@ -64,19 +73,23 @@
                     [
                         {
                             id: 1, 
-                            img:'<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">'
+                            img:'<img src="img/publicPapers.png" alt="publicPapers" width="180" height="160">',
+                            level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">'
+                            img:'<img src="img/restrictedPapers.png" alt="restrictedPapers" width="180" height="160">',
+                            level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">'
+                            img:'<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+                            level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">'
+                            img:'<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
+                            level: 4
                         }                        
                     ],
                 'imgDest': 
@@ -84,22 +97,26 @@
                         { 
                             id: 1, 
                             img:'<img src="img/JustEmail.png" alt="RegularEmail" width="160" height="140">', 
-                            txt:'Send by Any Available Email Service'
+                            txt:'Send by Any Available Email Service',
+                            level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/gmail-encryption-Lock-large.jpg" alt="gmail-encryption-Lock-large" width="160" height="140">', 
-                            txt:'Use Corporate Outlook or Corporate Gmail' 
+                            txt:'Use Corporate Outlook or Corporate Gmail',
+                            level: 2
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/locked_spemail-logo.png" alt="locked_spemail-logo" width="160" height="140">', 
-                            txt:'Email Serivce Allows Cryptography Plugin'
+                            txt:'Email Serivce Allows Cryptography Plugin',
+                            level: 3
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/Proton_e2e-encryp.png" alt="Proton_e2e-encryp" width="160" height="140">', 
-                            txt:'ProtonMail or Other MUST have End-To-End Encryption' 
+                            txt:'ProtonMail or Other MUST have End-To-End Encryption',
+                            level: 4
                         }
                     ]
             }, 
@@ -113,19 +130,23 @@
                     [
                         {
                             id: 1, 
-                            img:'<img src="img/publicPapersGreen.png" alt="publicPapersGreen" width="180" height="160">'
+                            img:'<img src="img/publicPapersGreen.png" alt="publicPapersGreen" width="180" height="160">',
+                            level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="img/restrictedPapersYellow.png" alt="RestrictedPapers" width="180" height="160">'
+                            img:'<img src="img/restrictedPapersYellow.png" alt="RestrictedPapers" width="180" height="160">',
+                            level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">'
+                            img:'<img src="img/confidentialPapers.png" alt="confidentialPapers" width="180" height="160">',
+                            level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">'
+                            img:'<img src="img/sensitivePapers.png" alt="sensitivePapers" width="180" height="160">',
+                            level: 4
                         }                        
                     ],
                 'imgDest': 
@@ -133,22 +154,26 @@
                         { 
                             id: 1, 
                             img:'<img src="img/any-cloud.png" alt="cloud-storage" width="180" height="160">', 
-                            txt:'To ANY Public Cloud Service Accessible by Employees'
+                            txt:'To ANY Public Cloud Service Accessible by Employees',
+                            level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/MS-Teams-SharedStore.png" alt="MS-Teams-SharedStore" width="180" height="160">', 
-                            txt:'Corporate TEAMS or Shared Storage' 
+                            txt:'Corporate TEAMS or Shared Storage',
+                            level: 2
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/TeamsLogorev.png" alt="TeamsLogorev" width="180" height="160">', 
-                            txt:'Corporate TEAMS Shared with Limited Access Only'
+                            txt:'Corporate TEAMS Shared with Limited Access Only',
+                            level: 3
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/nextCloudShade.png" alt="nextCloud" width="180" height="160">', 
-                            txt:'MUHC Corporate NextCloud, allowed MUHC Encryption Hosted in Canada/EU' 
+                            txt:'MUHC Corporate NextCloud, allowed MUHC Encryption Hosted in Canada/EU',
+                            level: 4
                         }
                     ]
             }, 
@@ -156,7 +181,7 @@
         }        
     ];
     
-    leftTopColMsg();
+    // leftTopColMsg();
 
     function init() {
         //set initial images:
@@ -178,128 +203,83 @@
         imgDest = shuffle(imgDest);
         //console.log('imgDest[]: ', imgDest);
         var backColor = arrObjects[objectId].backgColor;
-        // for (let j=0; j<=3; j++) {
-
-        // }
-    //show background div:
-    $('#backgroundDiv').show();      
         
-    // show game selector:
-    $('#selectGame').show();     
-    $('#successMessage').hide();  // Hide the success message  
-    $('#failedMessage').hide(); // Hide the failure message
-    //setting correct css props for success messages
-    $('#successMessage').css( {
-        left: '85%',
-        top: '250px',
-        width: 0,
-        height: 0
-    } );
-    //setting correct css props for failure messages  
-    $('#failedMessage').css( {
-        left: '85%',
-        top: '250px',
-        width: 0,
-        height: 0
-    } );
+        //show background div:
+        // adding a class: class-backgroundDiv     
 
-    // Reset the game
-    correctCards = 0;
-    failedTurn = 0;
-    $('#cardPile').html( '' );
-    $('#cardSlots').html( '' );
-    $("#content").css("background-color", backColor);
-    // Create the pile of shuffled cards
-    //$('<div>' + '' + '</div>').data( 'number', 10 ).attr( 'id', 'emptyCard'+0 ).appendTo( '#cardPile' ); // empty slot
-    //$('<div>' + '' + '</div>').data( 'number', 11 ).attr( 'id', 'emptyCard'+1 ).appendTo( '#cardPile' ); // empty slot
-    for (let k = 0; k < maxItems; k++) {
-        $('<div>' + docImg[k].img + '</div>').data( 'number', docImg[k].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
-            containment: '#content',
-            stack: '#cardPile div',
-            cursor: 'move',
-            revert: true
-            } );
-        //$("#gameTextDiv").html(gameText);
-        $("#textMessage").html('<h4>'+gameText+'</h4>');     
-        $('<div>' + imgDest[k].img + '<h4 style="margin-top: -10px;">' + imgDest[k].txt + '</h4></div>').data( 'number', imgDest[k].id ).appendTo( '#cardSlots' ).droppable( {
-        accept: '#cardPile div',
-        hoverClass: 'hovered',
-        drop: handleCardDrop
+        $('#backgroundDiv').addClass('class-backgroundDiv');
+        $('#backgroundDiv').show();      
+            
+        // show game selector:
+        $('#selectGame').show();
+        //hidePageObjecs();      
+        $('#successMessage').hide();  // Hide the success message  
+        $('#failedMessage').hide(); // Hide the failure message
+        $('#infoMessage').hide();  // Hide info Message
+
+        //setting correct css props for success messages
+        $('#successMessage').css( {
+            left: '85%',
+            top: '250px',
+            width: 0,
+            height: 0
         } );
-    }
-    
-    // $('<div>' + docImg[0].img + '</div>').data( 'number', docImg[0].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
-    //     containment: '#content',
-    //     stack: '#cardPile div',
-    //     cursor: 'move',
-    //     revert: true
-    //     } );
-    // $('<div>' + docImg[1].img + '</div>').data( 'number', docImg[1].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
-    //     containment: '#content',
-    //     stack: '#cardPile div',
-    //     cursor: 'move',
-    //     revert: true
-    //     } );
-    // $('<div>' + docImg[2].img + '</div>').data( 'number', docImg[2].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
-    //     containment: '#content',
-    //     stack: '#cardPile div',
-    //     cursor: 'move',
-    //     revert: true
-    //     } );        
-    // $('<div>' + docImg[3].img + '</div>').data( 'number', docImg[3].id ).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
-    //     containment: '#content',
-    //     stack: '#cardPile div',
-    //     cursor: 'move',
-    //     revert: true
-    //     } );
-    
-        //$('<div>' + '' + '</div>').data( 'number', 12 ).attr( 'id', 'emptyCard'+2 ).appendTo( '#cardPile' ); // empty slot
-    //$('<div>' + '' + '</div>').data( 'number', 13 ).attr( 'id', 'emptyCard'+3 ).appendTo( '#cardPile' ); // empty slot  
+        //setting correct css props for failure messages  
+        $('#failedMessage').css( {
+            left: '85%',
+            top: '250px',
+            width: 0,
+            height: 0
+        } );
+        //setting correct css props for info messages
+        $('#infoMessage').css( {
+            left: '85%',
+            top: '250px',
+            width: 0,
+            height: 0
+        } );
 
-    // Create the card slots
-    //$('<div>' + ' ' + '</div>').data( 'number', 100 ).appendTo( '#cardSlots' );  
-    // $('<div>' + imgDest[0].img + imgDest[0].txt + '</div>').data( 'number', imgDest[0].id ).appendTo( '#cardSlots' ).droppable( {
-    //     accept: '#cardPile div',
-    //     hoverClass: 'hovered',
-    //     drop: handleCardDrop
-    //     } );
-    // $('<div>' + imgDest[1].img + imgDest[1].txt + '</div>').data( 'number', imgDest[1].id ).appendTo( '#cardSlots' ).droppable( {
-    //     accept: '#cardPile div',
-    //     hoverClass: 'hovered',
-    //     drop: handleCardDrop
-    //     } );
-    // $('<div>' + imgDest[2].img + imgDest[2].txt + '</div>').data( 'number', imgDest[2].id ).appendTo( '#cardSlots' ).droppable( {
-    //     accept: '#cardPile div',
-    //     hoverClass: 'hovered',
-    //     drop: handleCardDrop
-    //     } );
-    // $('<div>' + imgDest[3].img + imgDest[3].txt + '</div>').data( 'number', imgDest[3].id ).appendTo( '#cardSlots' ).droppable( {
-    //     accept: '#cardPile div',
-    //     hoverClass: 'hovered',
-    //     drop: handleCardDrop
-    //     } );
+        // Reset the game
+        correctCards = 0;
+        failedTurn = 0;
+        $('#cardPile').html( '' );
+        $('#cardSlots').html( '' );
+        $("#content").css("background-color", backColor);
+        // Create the pile of shuffled cards
+        for (let k = 0; k < maxItems; k++) {
+            $('<div>' + docImg[k].img + '</div>').data( 'numberLevel', {'number': docImg[k].id, 'level': docImg[k].level }).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+                containment: '#content',
+                stack: '#cardPile div',
+                cursor: 'move',
+                revert: true
+                } );
+            //$("#gameTextDiv").html(gameText);
+            $("#textMessage").html('<h4>'+gameText+'</h4>');     
+            $('<div>' + imgDest[k].img + '<h4 style="margin-top: -10px;">' + imgDest[k].txt + '</h4></div>').data( 'numberLevel', {'number': imgDest[k].id, 'level': imgDest[k].level}).appendTo( '#cardSlots' ).droppable( {
+            accept: '#cardPile div',
+            hoverClass: 'hovered',
+            drop: handleCardDrop
+            } );
 
-    //$('<div>' + ' ' + '</div>').data( 'number', 103 ).appendTo( '#cardSlots' );    
-    
-        // for ( var i=0; i<=3; i++ ) {
-        //     $('<div>' + imgDest2 + txtDest2 + '</div>').data( 'number', 2 ).appendTo( '#cardSlots' ).droppable( {
-        //         accept: '#cardPile div',
-        //         hoverClass: 'hovered',
-        //         drop: handleCardDrop
-        //         } );
-        // }
-        
+            // $('<div>' + imgDest[k].img + '<h4 style="margin-top: -10px;">' + imgDest[k].txt + '</h4></div>').data( 'number', imgDest[k].id ).appendTo( '#cardSlots' ).droppable( {
+            //     accept: '#cardPile div',
+            //     hoverClass: 'hovered',
+            //     drop: handleCardDrop
+            //     } );
+        }   
     }
 
     function handleCardDrop( event, ui ) {
-        var slotNumber = $(this).data( 'number' );
-        var cardNumber = ui.draggable.data( 'number' );        
+        var slotNumber = $(this).data( 'numberLevel' );
+        var slotLevel  = $(this).data( 'numberLevel' );
+        var cardNumber = ui.draggable.data( 'numberLevel' );
+        var cardLevel  = ui.draggable.data( 'numberLevel' );     
         //console.log('slotNumber: ',slotNumber,', cardNumber: ',cardNumber);
         // If the card was dropped to the correct slot,
         // change the card colour, position it directly
         // on top of the slot, and prevent it being dragged
         // again  
-        if ( slotNumber == cardNumber ) { 
+        if ( slotNumber.number == cardNumber.number ) { 
             ui.draggable.addClass( 'correct' );
             ui.draggable.draggable( 'disable' );
             $(this).droppable( 'disable' );
@@ -308,6 +288,14 @@
             correctCards++;
             //console.log('Correct: ui: ',ui);
         }  else {
+            var msgObj = '#failedMessage';
+            if ( slotLevel.level > cardLevel.level) {
+                console.log(' slotLevel (',slotLevel.level,') is greater than cardLevel (',cardLevel.level,')');
+                msgObj = '#infoMessage';
+            } else {
+                console.log(' cardLevel (',cardLevel.level,') is greater than slotLevel (',slotLevel.level,')');
+                msgObj = '#failedMessage';
+            }
             // if this is incorrect card dropped:
             ui.draggable.addClass( 'incorrect' );
             uiObj = ui;
@@ -316,8 +304,8 @@
             //$(this).droppable( 'disable' );
             //ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
             //ui.draggable.draggable( 'option', 'revert', false );
-            $('#failedMessage').show();
-            $('#failedMessage').animate( {
+            $(msgObj).show();
+            $(msgObj).animate( {
                 left: '35%',
                 top: '200px',
                 width: '400px',
@@ -337,14 +325,16 @@
             height: '100px',
             opacity: 1
             } );
+            //console.log(' objectId = ', objectId,' - time to swap the values!')
         }
         checkGameState(objectId);
     }
 
     function clearWrongDrop() {
-        console.log('Wrong placement!');
+        //console.log('Wrong placement!');
         $('#successMessage').hide();  // Hide the success message  
         $('#failedMessage').hide(); // Hide the failure message
+        $('#infoMessage').hide(); // Hide the failure message
         //setting correct css props for success messages
         $('#successMessage').css( {
             left: '85%',
@@ -359,6 +349,13 @@
             width: 0,
             height: 0
         } );
+        //setting correct css props for info messages  
+        $('#infoMessage').css( {
+            left: '85%',
+            top: '250px',
+            width: 0,
+            height: 0
+        } );
         //$('#card1').removeClass( 'incorrect' );
         uiObj.draggable.removeClass();
     }
@@ -367,6 +364,7 @@
         //   $("#rightTopColMsg").click(function(){
         //     $("#selectGame").hide();
         // });
+        //showPageObjecs();
         objectId=0;
         init();
         $("#selectGame").hide();  
@@ -375,7 +373,20 @@
         $('#imgTxtMessage').removeClass("textMessageEmail");
       }
       function clickTopRight() { 
-        // $( init );  
+          // Manage Document Store and transportation + USB
+        // $( init );
+        //showPageObjecs();
+        if ( isFlip === true ) {            
+            m = $('#cardPile');
+            n = $('#cardSlots');
+            m.attr('id','cardSlots');
+            n.attr('id','cardPile');
+            $('#cardPile').hide();
+            $('#cardSlots').hide();
+            $('#cardPile').show();
+            $('#cardSlots').show();
+            isFlip = false;
+        }        
         objectId=0;
         init();
         $("#selectGame").hide();
@@ -385,12 +396,28 @@
         $('#cardPile').addClass("cardPile");
         $('#cardSlots').addClass("cardSlots");
         $('#gameTextDiv').removeClass("gameTextVerticalDiv");
+        $('#imgTxtMessage').removeClass("textMessageFiles");
+        $('#imgTxtMessage').removeClass("textMessageEmail");
+        $('#imgTxtMessage').removeClass("textMessageCloud")
         $('#gameTextDiv').addClass("gameTextHorizDiv");
         $('#imgTxtMessage').addClass("textMessageFiles");
         $('#textMessage').addClass("imgTxtClear");
+
       }
       function leftBotColMsg() { 
-        // $( init );  
+        // $( init );
+        //showPageObjecs();
+        if ( isFlip === true ) {            
+                m = $('#cardPile');
+                n = $('#cardSlots');
+                m.attr('id','cardSlots');
+                n.attr('id','cardPile');
+                $('#cardPile').hide();
+                $('#cardSlots').hide();
+                $('#cardPile').show();
+                $('#cardSlots').show();
+                isFlip = false;
+        }  
         objectId=1;
         init();
         $("#selectGame").hide();
@@ -399,14 +426,29 @@
         $('#cardSlots').removeClass("cardSlots");
         $('#cardPile').addClass("cardPileVertical");
         $('#cardSlots').addClass("cardSlotsVertical");
-        $('#gameTextDiv').removeClass("gameTextHorizDiv");
+        $('#gameTextDiv').removeClass("gameTextHorizDiv");         
+        $('#imgTxtMessage').removeClass("textMessageFiles");
+        $('#imgTxtMessage').removeClass("textMessageEmail");
+        $('#imgTxtMessage').removeClass("textMessageCloud");
         $('#gameTextDiv').addClass("gameTextVerticalDiv");
-        $('#textMessage').removeClass("imgTxtClear");
-        $('#imgTxtMessage').addClass("textMessageEmail");
-        
+        $('#textMessage').addClass("imgTxtClear");
+        $('#imgTxtMessage').addClass("textMessageEmail");  
       }
+
       function rightBotColMsg() { 
-        // $( init );  
+        // $( init );      
+        //showPageObjecs();    
+        if ( isFlip === false ) {            
+            m = $('#cardPile');
+            n = $('#cardSlots');
+            m.attr('id','cardSlots');
+            n.attr('id','cardPile');
+            $('#cardPile').hide();
+            $('#cardSlots').hide();
+            $('#cardPile').show();
+            $('#cardSlots').show();            
+            isFlip = true;
+        }  
         objectId=2;
         init();
         $("#selectGame").hide();
@@ -417,9 +459,13 @@
         $('#cardPile').addClass("cardPile");
         $('#cardSlots').addClass("cardSlots");
         $('#gameTextDiv').removeClass("gameTextVerticalDiv");
+        $('#imgTxtMessage').removeClass("textMessageFiles");
+        $('#imgTxtMessage').removeClass("textMessageEmail");
+        $('#imgTxtMessage').removeClass("textMessageCloud")
         $('#gameTextDiv').addClass("gameTextHorizDiv");
         $('#imgTxtMessage').addClass("textMessageCloud");
         $('#textMessage').addClass("imgTxtClear");
+                
       }
 
       function shuffle(array) {
@@ -440,6 +486,7 @@
       
         return array;
       }
+
 function closeTheGame() {
     checkGameState(objectId);
 
@@ -447,6 +494,18 @@ function closeTheGame() {
     $('#cardSlots').removeClass("cardSlotsVertical");
     $('#gameTextDiv').removeClass("gameTextVerticalDiv");
     $('#imgTxtMessage').removeClass();
+
+    if ( isFlip === true) {
+        m = $('#cardPile');
+        n = $('#cardSlots');
+        m.attr('id','cardSlots');
+        n.attr('id','cardPile');
+        $('#cardPile').hide();
+        $('#cardSlots').hide();
+        $('#cardPile').show();
+        $('#cardSlots').show();
+        isFlip = false;
+    }
     objectId=0;
     init();
 }
@@ -515,4 +574,26 @@ function checkGameState (objId) {
             console.log("game State verification.... ");
             break;
     } 
+}
+
+function hidePageObjecs() {
+    // using jQuery
+    console.log('!!! Time to hide page content!');
+    $("#content").hide(); 
+    $("#pageFoolter").hide();
+    // $("#selectGame").hide();
+    // $('#backgroundDiv').hide();     
+    
+    // $('#cardPile').hide();
+    // $('#cardSlots').hide();
+    // $('#gameTextDiv').hide();
+    // $('#imgTxtMessage').hide();  
+    // $('#textMessage').hide();
+}
+
+function showPageObjecs() {
+    // using jQuery
+    console.log('!!! Time to show page content!');
+    $("#content").show(); 
+    $("#pageFoolter").show();
 }
