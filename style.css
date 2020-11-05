@@ -532,3 +532,18 @@ body {
     font-size: 1.5em;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   }
+
+  .class-starWhite {
+    color: #fff;
+    text-shadow: 1px 1px #370438;
+  }
+
+  .class-starYellow {
+    color: yellow;
+    text-shadow: 1px 1px #370438;
+  }
+
+  .class-starRed {
+    color: red;
+    text-shadow: 1px 1px #370438;
+  }

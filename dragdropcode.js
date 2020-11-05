@@ -290,10 +290,10 @@
         }  else {
             var msgObj = '#failedMessage';
             if ( slotLevel.level > cardLevel.level) {
-                console.log(' slotLevel (',slotLevel.level,') is greater than cardLevel (',cardLevel.level,')');
+                //console.log(' slotLevel (',slotLevel.level,') is greater than cardLevel (',cardLevel.level,')');
                 msgObj = '#infoMessage';
             } else {
-                console.log(' cardLevel (',cardLevel.level,') is greater than slotLevel (',slotLevel.level,')');
+                //console.log(' cardLevel (',cardLevel.level,') is greater than slotLevel (',slotLevel.level,')');
                 msgObj = '#failedMessage';
             }
             // if this is incorrect card dropped:
@@ -437,7 +437,10 @@
 
       function rightBotColMsg() { 
         // $( init );      
-        //showPageObjecs();    
+        //showPageObjecs();
+        $('#cardPile').removeClass();
+        $('#cardSlots').removeClass();
+
         if ( isFlip === false ) {            
             m = $('#cardPile');
             n = $('#cardSlots');
@@ -452,38 +455,34 @@
         objectId=2;
         init();
         $("#selectGame").hide();
-        $('#backgroundDiv').hide();     
+        $('#backgroundDiv').hide();    
         
         $('#cardPile').removeClass("cardPileVertical");
         $('#cardSlots').removeClass("cardSlotsVertical");
+        
         $('#cardPile').addClass("cardPile");
         $('#cardSlots').addClass("cardSlots");
         $('#gameTextDiv').removeClass("gameTextVerticalDiv");
-        $('#imgTxtMessage').removeClass("textMessageFiles");
-        $('#imgTxtMessage').removeClass("textMessageEmail");
-        $('#imgTxtMessage').removeClass("textMessageCloud")
+        // $('#imgTxtMessage').removeClass("textMessageFiles");
+        // $('#imgTxtMessage').removeClass("textMessageEmail");
+        //$('#imgTxtMessage').removeClass("textMessageCloud")
         $('#gameTextDiv').addClass("gameTextHorizDiv");
         $('#imgTxtMessage').addClass("textMessageCloud");
-        $('#textMessage').addClass("imgTxtClear");
-                
+        $('#textMessage').addClass("imgTxtClear");                
       }
 
       function shuffle(array) {
-        var currentIndex = array.length, temporaryValue, randomIndex;
-      
+        var currentIndex = array.length, temporaryValue, randomIndex;      
         // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-      
+        while (0 !== currentIndex) {      
           // Pick a remaining element...
           randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex -= 1;
-      
+          currentIndex -= 1;      
           // And swap it with the current element.
           temporaryValue = array[currentIndex];
           array[currentIndex] = array[randomIndex];
           array[randomIndex] = temporaryValue;
-        }
-      
+        }      
         return array;
       }
 
