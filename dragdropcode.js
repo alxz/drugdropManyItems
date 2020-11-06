@@ -68,7 +68,7 @@
                         }
                     ]
             }, 
-            'backgColor' : '#CCCC99'
+            'backgColor' : '#E1F1DF'
         },
         {
             'game': {
