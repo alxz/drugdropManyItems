@@ -15,27 +15,28 @@
         {
             'game': {
                 'maxItems': 4,
-                'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards)',
+                'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards) when transporting documents off-site',
+                'gameTxtClass' : 'class-digitalMediumMsg',
                 'imgSrc': 
                     [
                         {
                             id: 1, 
-                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="140" height="200">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="130" height="190">',
                             level: 1
                         },
                         {
-                            id: 2, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="140" height="200">',
-                            level: 2
+                            id: 4, 
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="130" height="190">',
+                            level: 4
                         },
                         { 
                             id: 3, 
-                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="140" height="200">',
+                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="130" height="190">',
                             level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="140" height="200">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="190">',
                             level: 4
                         }                        
                     ],
@@ -43,56 +44,57 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/frefDocImgFileUSB.png" alt="McGillUSBKey" width="180" height="160">', 
-                            txt:'USB Key',
+                            img:'<img src="img/USB_drive.png" alt="JustUSBKey" width="70" height="140">', 
+                            txt:'On any digital medium',
                             level: 1
                         },
                         { 
-                            id: 2, 
-                            img:'<img src="img/frefDocImgFileBriefCase.png" alt="Briefcase" width="180" height="160">', 
-                            txt:'In a Briefcase' ,
-                            level: 2
+                            id: 4, 
+                            img:'<img src="img/USB_drive-Encryption.png" alt="Encrypted Digital Medium" width="100" height="150">', 
+                            txt:'On an encrypted digital medium' ,
+                            level: 4
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/frefDocImgFileEncryptUSBSW.png" alt="FileEncryptUSBSW" width="180" height="160">', 
-                            txt:'Information Has Encryption',
+                            img:'<img src="img/frefDocImgFileBriefCase.png" alt="Briefcase" width="160" height="150">', 
+                            txt:'Digital medium is in a bag or a briefcase',
                             level: 3
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/frefDocImgFileDiskEncryptUSBSW.png" alt="small-fireproof-safe" width="180" height="160">', 
-                            txt:'Must Have Encryption Software',
+                            img:'<img src="img/USB_drive-Encryption.png" alt="Encrypted Digital Medium" width="100" height="150">', 
+                            txt:'On an encrypted digital medium',
                             level: 4
                         }
                     ]
             }, 
-            'backgColor' : '#ec9b9b'
+            'backgColor' : '#CCCC99'
         },
         {
             'game': {
                 'maxItems': 4,
                 'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards)',
+                'gameTxtClass' : 'class-emailsMsg',
                 'imgSrc': 
                     [
                         {
                             id: 1, 
-                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="140" height="200">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="130" height="190">',
                             level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="140" height="200">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="130" height="190">',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="140" height="200">',
+                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="130" height="190">',
                             level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="140" height="200">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="190">',
                             level: 4
                         }                        
                     ],
@@ -100,25 +102,25 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/refDoc_EmailANY.png" alt="RegularEmail" width="150" height="140">', 
+                            img:'<img src="img/refDoc_EmailANY.png" alt="RegularEmail" width="130" height="130">', 
                             txt:'Any Available Email Service',
                             level: 1
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/refDoc_EmailMSOutlook.png" alt="microsoft-outlook-logo.png" width="150" height="140">', 
+                            img:'<img src="img/refDoc_EmailMSOutlook.png" alt="microsoft-outlook-logo.png" width="130" height="130">', 
                             txt:'MUHC Corporate Email Service',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/refDoc_EmailOpenPGPProtonEtc.png" alt="locked_spemail-logo" width="150" height="140">', 
+                            img:'<img src="img/refDoc_EmailOpenPGPProtonEtc.png" alt="locked_spemail-logo" width="130" height="130">', 
                             txt:'Email Serivce with a Cryptography Plugin',
                             level: 3
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="150" height="140">', 
+                            img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="130" height="130">', 
                             txt:'ProtonMail or Other End-To-End Encrypted Email Service',
                             level: 4
                         }
@@ -130,26 +132,27 @@
             'game': {
                 'maxItems': 4,
                 'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards)',
+                'gameTxtClass' : 'class-cloudsMsg',
                 'imgSrc': 
                     [
                         {
                             id: 1, 
-                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="140" height="200">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="130" height="190">',
                             level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="140" height="200">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="130" height="190">',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="140" height="200">',
+                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="130" height="190">',
                             level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="140" height="200">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="190">',
                             level: 4
                         }                        
                     ],
@@ -157,25 +160,25 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/refDoc_CloudANY.png" alt="cloud-storage" width="150" height="150">', 
+                            img:'<img src="img/refDoc_CloudANY.png" alt="cloud-storage" width="130" height="130">', 
                             txt:'ANY Cloud Server Accessible by Employees',
                             level: 1
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="150" height="150">', 
+                            img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="130" height="130">', 
                             txt:'MUHC Corporate Cloud',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/refDoc_CloudConfidential.png" alt="refDoc_CloudConfidential" width="150" height="150">', 
+                            img:'<img src="img/refDoc_CloudConfidential.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
                             txt:'Any Cloud Hosted in Canada or EU (encrypting the files on servers)',
                             level: 3
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/refDoc_CloudSensitiveEncrNEXTCloud.png" alt="nextCloud" width="150" height="150">', 
+                            img:'<img src="img/refDoc_CloudSensitiveEncrNEXTCloud.png" alt="nextCloud" width="130" height="130">', 
                             txt:'MUHC Private Cloud',
                             level: 4
                         }
@@ -191,7 +194,8 @@
         //set initial images:
         var docImg = []; //to store images for items to drag-n-drop
         var imgDest = []; //to store placeholders where to drop
-        var gameText = arrObjects[objectId].game.gameTxt;
+        var gameText = arrObjects[objectId].game.gameTxt; // game message text
+        var gameTxtClass = arrObjects[objectId].game.gameTxtClass; // game message decoration class
         var maxItems = arrObjects[objectId].game.maxItems;
         for (let i = 0; i < arrObjects[objectId].game.imgSrc.length; i++) {
             docImg.push (arrObjects[objectId].game.imgSrc[i]);
@@ -258,7 +262,9 @@
                 revert: true
                 } );
             //$("#gameTextDiv").html(gameText);
-            $("#textMessage").html('<h4>'+gameText+'</h4>');     
+            $("#textMessage").html('<h4>'+gameText+'</h4>');
+            $("#textMessage").removeClass(); // removind all classes 'gameTxtClass' : 'class-emailsMsg',
+            $("#textMessage").addClass(gameTxtClass);
             $('<div>' + imgDest[k].img + '<h4 style="margin-top: -10px;">' + imgDest[k].txt + '</h4></div>').data( 'numberLevel', {'number': imgDest[k].id, 'level': imgDest[k].level}).appendTo( '#cardSlots' ).droppable( {
             accept: '#cardPile div',
             hoverClass: 'hovered',

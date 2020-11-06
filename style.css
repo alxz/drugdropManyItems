@@ -573,3 +573,25 @@ body {
       font-size: 1.5em;
       /* background: #e1f1df; */
   }
+
+  .class-digitalMediumMsg {
+    background-color: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+  }
+
+  .class-emailsMsg {
+    background-color: none;
+    border: 2px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+  }
+
+  .class-cloudsMsg {
+    background-color: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+  }
