@@ -25,14 +25,14 @@
                             level: 1
                         },
                         {
+                            id: 3, 
+                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="190" height="150">',
+                            level: 3  
+                        },
+                        {                             
                             id: 4, 
                             img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="190" height="150">',
                             level: 4
-                        },
-                        { 
-                            id: 3, 
-                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="190" height="150">',
-                            level: 3
                         },
                         {
                             id: 4,
@@ -44,21 +44,21 @@
                     [
                         { 
                             id: 1, 
-                            img:'<img src="img/USB_drive.png" alt="JustUSBKey" width="70" height="140">', 
-                            txt:'On any digital medium',
+                            img:'<img src="img/USB_drive.png" alt="JustUSBKey" width="70" height="150">', 
+                            txt:'On any Digital Medium',
                             level: 1
-                        },
-                        { 
-                            id: 4, 
-                            img:'<img src="img/USB_drive-Encryption.png" alt="Encrypted Digital Medium" width="100" height="150">', 
-                            txt:'On an encrypted digital medium' ,
-                            level: 4
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/frefDocImgFileBriefCase.png" alt="Briefcase" width="160" height="150">', 
-                            txt:'Digital medium is in a bag or a briefcase',
-                            level: 3
+                            txt:'Digital Medium is in a bag or a briefcase',
+                            level: 3  
+                        },
+                        {                             
+                            id: 4, 
+                            img:'<img src="img/USB_drive-Encryption.png" alt="Encrypted Digital Medium" width="100" height="150">', 
+                            txt:'On an encrypted digital medium' ,
+                            level: 4
                         },
                         { 
                             id: 4, 
@@ -88,9 +88,9 @@
                             level: 2
                         },
                         { 
-                            id: 3, 
+                            id: 4, 
                             img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="190" height="150">',
-                            level: 3
+                            level: 4
                         },
                         {
                             id: 4,
@@ -103,7 +103,7 @@
                         { 
                             id: 1, 
                             img:'<img src="img/refDoc_EmailANY.png" alt="RegularEmail" width="130" height="130">', 
-                            txt:'Any Available Email Service',
+                            txt:'Any available Email Service',
                             level: 1
                         },
                         { 
@@ -113,10 +113,10 @@
                             level: 2
                         },
                         { 
-                            id: 3, 
-                            img:'<img src="img/refDoc_EmailOpenPGPProtonEtc.png" alt="locked_spemail-logo" width="130" height="130">', 
-                            txt:'Email Serivce with a Cryptography Plugin',
-                            level: 3
+                            id: 4, 
+                            img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="130" height="130">', 
+                            txt:'ProtonMail or Other End-To-End Encrypted Email Service',
+                            level: 4
                         },
                         { 
                             id: 4, 
@@ -142,12 +142,12 @@
                         },
                         {
                             id: 2, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="190" height="150">',
-                            level: 2
+                            img:'<img src="' + restrDocImg + '" alt="restrictedPapers" width="190" height="150">',
+                            level: 2                            
                         },
                         { 
                             id: 3, 
-                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="190" height="150">',
+                            img:'<img src="' + confDocImg + '" alt="confidentialPapers" width="190" height="150">',
                             level: 3
                         },
                         {
@@ -161,25 +161,26 @@
                         { 
                             id: 1, 
                             img:'<img src="img/refDoc_CloudANY.png" alt="cloud-storage" width="130" height="130">', 
-                            txt:'ANY Cloud Server Accessible by Employees',
+                            txt:'Any Cloud Service accessible by employees',
                             level: 1
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/refDoc_CloudConfidential.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
-                            txt:'MUHC Corporate Cloud, Any Cloud Hosted in Canada or EU (encrypting the files on servers)',
-                            level: 2                            
+                            img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="130" height="130">', 
+                            txt:'Only Cloud Services supporting file encryption',
+                            level: 2
+                                                       
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="130" height="130">', 
-                            txt:'Any cloud encrypting files on servers',
-                            level: 3
+                            img:'<img src="img/refDoc_CloudConfidential.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
+                            txt:'MS TEAMS </br>MUHC Corporate Cloud',
+                            level: 3 
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_CloudSensitiveEncrNEXTCloud.png" alt="nextCloud" width="130" height="130">', 
-                            txt:'NextCloud MUHC Private Cloud',
+                            txt:'NextCloud </br>MUHC Protected Cloud',
                             level: 4
                         }
                     ]
