@@ -84,12 +84,12 @@
                         },
                         {
                             id: 2, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="190" height="150">',
+                            img:'<img src="' + restrDocImg + '" alt="restrictedPapers" width="190" height="150">',
                             level: 2
                         },
                         { 
                             id: 4, 
-                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="190" height="150">',
+                            img:'<img src="' + confDocImg + '" alt="confidentialPapers" width="190" height="150">',
                             level: 4
                         },
                         {
