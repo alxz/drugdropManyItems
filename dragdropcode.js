@@ -15,6 +15,7 @@
         {
             'game': {
                 'maxItems': 4,
+                'titleTxt': 'Digital medium: transporting documents off-site',
                 'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards) when transporting documents off-site',
                 'gameTxtClass' : 'class-digitalMediumMsg',
                 'imgSrc': 
@@ -73,6 +74,7 @@
         {
             'game': {
                 'maxItems': 4,
+                'titleTxt': 'Emails: transporting documents off-site',
                 'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards)',
                 'gameTxtClass' : 'class-emailsMsg',
                 'imgSrc': 
@@ -131,6 +133,7 @@
         {
             'game': {
                 'maxItems': 4,
+                'titleTxt': 'Cloud Storage: transporting documents off-site',
                 'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards)',
                 'gameTxtClass' : 'class-cloudsMsg',
                 'imgSrc': 
@@ -173,13 +176,13 @@
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/refDoc_CloudConfidential.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
+                            img:'<img src="img/refDoc_CloudMSTEAMS_MUHC.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
                             txt:'MS TEAMS </br>MUHC Corporate Cloud',
                             level: 3 
                         },
                         { 
                             id: 4, 
-                            img:'<img src="img/refDoc_CloudSensitiveEncrNEXTCloud.png" alt="nextCloud" width="130" height="130">', 
+                            img:'<img src="img/refDoc_CloudRestrictedNextCloud.png" alt="nextCloud" width="130" height="130">', 
                             txt:'NextCloud </br>MUHC Protected Cloud',
                             level: 4
                         }
@@ -197,6 +200,7 @@
         var imgDest = []; //to store placeholders where to drop
         var gameText = arrObjects[objectId].game.gameTxt; // game message text
         var gameTxtClass = arrObjects[objectId].game.gameTxtClass; // game message decoration class
+        var titleTxt = arrObjects[objectId].game.titleTxt;
         var maxItems = arrObjects[objectId].game.maxItems;
         for (let i = 0; i < arrObjects[objectId].game.imgSrc.length; i++) {
             docImg.push (arrObjects[objectId].game.imgSrc[i]);
@@ -250,7 +254,8 @@
 
         // Reset the game
         correctCards = 0;
-        failedTurn = 0;
+        failedTurn = 0;        
+        $('#textMsg').html( '<h1>' + titleTxt + '</h1>');
         $('#cardPile').html( '' );
         $('#cardSlots').html( '' );
         $("#content").css("background-color", backColor);
