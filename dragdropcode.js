@@ -6,10 +6,10 @@
     var gameTwo;
     var gameThree;
     var isFlip = false;
-    var publicDocImg = "img/PublicDocsAll.png";
-    var confDocImg = "img/ConfidentialDocsAll.png";
-    var restrDocImg = "img/RestrictedDocsAll.png";
-    var sensDocImg = "img/SensitiveDocsAll.png";
+    var publicDocImg = "img/documentsPilePub.png";
+    var confDocImg = "img/documentsPileConf.png";
+    var restrDocImg = "img/documentsPileRest.png";
+    var sensDocImg = "img/documentsPileSens.png";
     $( init );
     var arrObjects = [
         {
@@ -21,22 +21,22 @@
                     [
                         {
                             id: 1, 
-                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="130" height="190">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="190" height="150">',
                             level: 1
                         },
                         {
                             id: 4, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="130" height="190">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="190" height="150">',
                             level: 4
                         },
                         { 
                             id: 3, 
-                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="130" height="190">',
+                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="190" height="150">',
                             level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="190">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="190" height="150">',
                             level: 4
                         }                        
                     ],
@@ -79,22 +79,22 @@
                     [
                         {
                             id: 1, 
-                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="130" height="190">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="190" height="150">',
                             level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="130" height="190">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="190" height="150">',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="130" height="190">',
+                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="190" height="150">',
                             level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="190">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="190" height="150">',
                             level: 4
                         }                        
                     ],
@@ -137,22 +137,22 @@
                     [
                         {
                             id: 1, 
-                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="130" height="190">',
+                            img:'<img src="' + publicDocImg + '" alt="publicPapers" width="190" height="150">',
                             level: 1
                         },
                         {
                             id: 2, 
-                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="130" height="190">',
+                            img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="190" height="150">',
                             level: 2
                         },
                         { 
                             id: 3, 
-                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="130" height="190">',
+                            img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="190" height="150">',
                             level: 3
                         },
                         {
                             id: 4,
-                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="130" height="190">',
+                            img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="190" height="150">',
                             level: 4
                         }                        
                     ],
@@ -166,20 +166,20 @@
                         },
                         { 
                             id: 2, 
-                            img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="130" height="130">', 
-                            txt:'MUHC Corporate Cloud',
-                            level: 2
+                            img:'<img src="img/refDoc_CloudConfidential.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
+                            txt:'MUHC Corporate Cloud, Any Cloud Hosted in Canada or EU (encrypting the files on servers)',
+                            level: 2                            
                         },
                         { 
                             id: 3, 
-                            img:'<img src="img/refDoc_CloudConfidential.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
-                            txt:'Any Cloud Hosted in Canada or EU (encrypting the files on servers)',
+                            img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="130" height="130">', 
+                            txt:'Any cloud encrypting files on servers',
                             level: 3
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_CloudSensitiveEncrNEXTCloud.png" alt="nextCloud" width="130" height="130">', 
-                            txt:'MUHC Private Cloud',
+                            txt:'NextCloud MUHC Private Cloud',
                             level: 4
                         }
                     ]
