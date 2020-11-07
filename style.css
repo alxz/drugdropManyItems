@@ -4,23 +4,25 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     line-height: 1.8em;
     color: #333;
-    background-image: url('img/numericBckgrd.png');    
+    background-image: url('img/numericBckgrd.png');
     background-size: 100% 100%;
     /* background-repeat: no-repeat, no-repeat; */
-    background-position: right, left; 
+    background-position: right, left;
   }
-  
+
   /* Give headings their own font */
-  
+
   h1, h2, h3, h4 {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   }
-  
+
   /* Main content area */
-  
+
   .gameContent {
     height: 850px;
     width: 980px;
+    /* max-width: 95%;
+    max-height: 95%; */
     margin-left: auto;
     margin-right: auto;
     padding: 20px;;
@@ -42,7 +44,7 @@ body {
   }
 
   /* Slots for final card positions */
- 
+
   .cardSlots {
     /* margin-top: 50px; */
     margin-left: auto;
@@ -114,18 +116,18 @@ body {
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
-    
+
   }
   .textMessage {
     margin: 10px;
     padding: 20px;
     border: 1px solid #333;
-    background: rgb(235, 217, 179); 
+    background: rgb(235, 217, 179);
     /* border: 2px solid #333; */
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background-image: none; 
+    background-image: none;
     /* margin: 0 0 0 10px; */
   }
 
@@ -137,10 +139,10 @@ body {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     /* margin: 0 0 0 10px; */
-    background-image: url('img/png_2xEmailArrow.png');    
+    background-image: url('img/png_2xEmailArrow.png');
     background-size:100% 100%;
     background-repeat: no-repeat, no-repeat;
-    background-position: right, left; 
+    background-position: right, left;
   }
 
   .textMessageFiles {
@@ -151,10 +153,10 @@ body {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     /* margin: 0 0 0 10px; */
-    background-image: url('img/png_FileArrows.png');    
+    background-image: url('img/png_FileArrows.png');
     background-size: 100% 100%;
     background-repeat: no-repeat, no-repeat;
-    background-position: right, left; 
+    background-position: right, left;
   }
 
   .textMessageCloud {
@@ -165,10 +167,10 @@ body {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     /* margin: 0 0 0 10px; */
-    background-image: url('img/png_CloudArrows.png');    
+    background-image: url('img/png_CloudArrows.png');
     background-size: 100% 100%;
     background-repeat: no-repeat, no-repeat;
-    background-position: right, left; 
+    background-position: right, left;
   }
 
   .imgTxtClear {
@@ -185,7 +187,7 @@ body {
     height: 820px;
     padding: 10px;
     /* border: 2px solid #333; */
-    /* 
+    /*
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -199,7 +201,7 @@ body {
     width: 200px;
     height: 820px;
     padding: 10px;
-    background: #ffd;    
+    background: #ffd;
     /* border: 2px solid #333;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -208,9 +210,9 @@ body {
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8); */
   }
-  
+
   /* Individual cards and slots */
-  
+
   #cardSlots div, #cardPile div {
     float: left;
     /* left: 100px; */
@@ -228,8 +230,8 @@ body {
     margin-right: auto;
     /* background: #fff; */
   }
-  
-  #cardPile div{    
+
+  #cardPile div{
     margin-left: auto;
     margin-right: auto;
     /* background: #ffd; */
@@ -253,28 +255,28 @@ body {
   #cardSlots div:first-child, #cardPile div:first-child {
     margin-left: 0;
   }
-  
+
   #cardSlots div.hovered {
     background: #aaa;
   }
-  
+
   /* #cardSlots div {
     border-style: dashed;
   } */
-  
+
   #cardPile div {
     /* background: rgb(223, 212, 215); */
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
   }
-  
+
   #cardPile div.ui-draggable-dragging {
     -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   }
-  
+
   /* Individually coloured cards */
   #card1.correct { background: rgb(196, 233, 137); }
   #card1.incorrect { background: rgb(243, 69, 16); }
@@ -289,13 +291,13 @@ body {
   #card8.correct { background: indigo; }
   #card9.correct { background: purple; }
   #card10.correct { background: violet; } */
-  
-  
+
+
   /* "You did it!" message */
   #successMessage {
     position: absolute;
     left: auto;
-    right: auto; 
+    right: auto;
     top: 20%;
     width: 0;
     height: 0;
@@ -309,13 +311,13 @@ body {
     -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
     box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
     padding: 50px;
-  }  
+  }
   /* "You fail!" message */
   #failedMessage {
     position: absolute;
     /* left: 25%; */
     left: auto;
-    right: auto; 
+    right: auto;
     top: 20%;
     width: 0;
     height: 0;
@@ -329,14 +331,14 @@ body {
     -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
     box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
     padding: 50px;
-  }    
+  }
 
   /* "Could be better!" - Info message */
   #infoMessage {
     position: absolute;
     /* left: 25%; */
     left: auto;
-    right: auto; 
+    right: auto;
     top: 20%;
     width: 0;
     height: 0;
@@ -350,7 +352,7 @@ body {
     -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
     box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
     padding: 50px;
-  }  
+  }
 
   .initMessage {
     position: absolute;
@@ -375,7 +377,7 @@ body {
     -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
     box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
     padding: 20px;
-  }  
+  }
 
   #topRowMsg {
     float: none;
@@ -472,17 +474,17 @@ body {
   }
 
   .class-backgroundDiv {
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     float: none;
     width: 100%;
     height: 100%;
     background: rgb(0,0,0,0.71);
-    background-image: url('img/numericBckgrd.png');    
+    background-image: url('img/numericBckgrd.png');
     background-size: 100% 100%;
     /* background-repeat: no-repeat, no-repeat; */
-    background-position: right, left; 
+    background-position: right, left;
     z-index: 100;
   }
 
@@ -490,8 +492,8 @@ body {
   .class-selectGame {
     margin: auto;
     padding-top: 30px;
-    /* 
-    border: 2px solid #333; */    
+    /*
+    border: 2px solid #333; */
     text-align: center;
   }
 
@@ -524,8 +526,9 @@ body {
   }
 
     /* Header/footer boxes */
-  
+
     .wideBox {
+      position: relative;
       clear: both;
       width: 980px;
       margin-left: auto;
@@ -534,7 +537,7 @@ body {
       margin-bottom: 10px;
       text-align: center;
       padding: 10px;
-      background: #e1f1df;      
+      background: #e1f1df;
       min-width: 1000px;
       border: 2px solid #FFF;
       /* border: 2px solid #333; */
@@ -543,31 +546,31 @@ body {
       border-radius: 10px;
       /* text-shadow: 1px 1px #FC00FF; */
     }
-    
+
     .wideBox h1 {
       font-weight: bold;
       margin: 10px;
       color: rgb(3, 2, 3);
       font-size: 1.5em;
     }
-    
+
   .class-closeX {
     position: absolute;
-    top: 30px;
-    left: 80%;
+    top: 8px;
+    left: 8px;
     font-weight: bold;
     color: black;
     text-align: center;
     height: 50px;
     width: 50px;
     /* background-image: url('img/closeIconRound.png');   */
-    background-image: url('img/closeIconRoundSquare.png');  
+    background-image: url('img/closeIconRoundSquare.png');
     background-size: 100% 100%;
     background-repeat: no-repeat, no-repeat;
-    background-position: right, left; 
+    background-position: right, left;
   }
 
-  .class-textMsg h1 {    
+  .class-textMsg h1 {
       font-weight: bold;
       color: rgb(3, 2, 3);
       font-size: 1.5em;
