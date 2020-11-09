@@ -12,20 +12,22 @@ body {
 
   /* Give headings their own font */
 
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5 {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   }
 
   /* Main content area */
 
   .gameContent {
-    height: 850px;
-    width: 980px;
-    /* max-width: 95%;
-    max-height: 95%; */
+    /* height: 800px;
+    width: 900px; */
+    min-width: 880px;
+    min-height: 780px;
+    max-width: 920px;
+    max-height: 820px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;;
+    padding: 20px;
     /* background: #abddec; */
     text-align: center;
     -moz-user-select: none;
@@ -39,8 +41,6 @@ body {
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-    min-width: 1000px;
-    min-height: 850px;
   }
 
   /* Slots for final card positions */
@@ -50,8 +50,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     /* background: #ddf; */
-    width: 950px;
-    height: 290px;
+    /* width: 950px;
+    height: 290px; */
+    width: 820px;
+    height: 200px;
     padding: 10px;
     /* border: 2px solid #333;
     -moz-border-radius: 10px;
@@ -68,8 +70,10 @@ body {
     /* background: #ffd; */
     margin-left: auto;
     margin-right: auto;
-    width: 920px;
-    height: 220px;
+    /* width: 920px;
+    height: 220px; */
+    width: 820px;
+    height: 200px;
     padding: 10px;
     /* border: 2px solid #333;
     -moz-border-radius: 10px;
@@ -83,10 +87,12 @@ body {
 
   .gameTextHorizDiv {
     clear: both;
-    float: inline-start;
-    width: 920px;
+    /* float: inline-start; */
+    /* width: 920px; */
+    width: 800px;
+    min-width: 780px;
     /* height: 160px; */
-    padding: 10px;
+    padding: 40px;
     /* border: 1px solid #333; */
     /* border: 2px solid #333; */
     -moz-border-radius: 10px;
@@ -95,13 +101,13 @@ body {
     /* margin: 0 0 0 10px; */
     margin-left: auto;
     margin-right: auto;
-    /* background: #fff; */
-    min-width: 900px;
+    /* background: #fff; */    
   }
   .gameTextVerticalDiv {
     float: left;
-    width: 500px;
-    height: 820px;
+    width: 420px;
+    min-width: 400px;
+    height: 700px;
     /* border: 1px solid #333; */
     /* background: rgb(235, 217, 179);  */
     /* border: 2px solid #333; */
@@ -111,8 +117,7 @@ body {
     /* margin: 0 0 0 10px; */
     margin-left: auto;
     margin-right: auto;
-    /* background: #fff; */
-    min-width: 500px;
+    /* background: #fff; */    
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
@@ -161,7 +166,7 @@ body {
 
   .textMessageCloud {
     margin: 0px;
-    padding: 40px 80px 40px 80px;
+    padding: 80px 80px 80px 80px;
     /* border: 2px solid #333; */
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -183,9 +188,12 @@ body {
     float: left;
     margin: 0 auto;
     background: #ffd;
-    width: 200px;
-    height: 820px;
-    padding: 10px;
+    width: 220px;
+    height: 780px;
+    /* width: 200px;
+    height: 820px; */
+    margin-top: -15px;
+    padding: 5px 5px 5px 5px;
     /* border: 2px solid #333; */
     /*
     -moz-border-radius: 10px;
@@ -198,9 +206,12 @@ body {
 
   .cardSlotsVertical {
     float: left;
-    width: 200px;
-    height: 820px;
-    padding: 10px;
+    width: 220px;
+    height: 780px;
+    /* width: 200px;
+    height: 820px; */
+    margin-top: -15px;
+    padding: 5px 5px 5px 5px;
     background: #ffd;
     /* border: 2px solid #333;
     -moz-border-radius: 10px;
@@ -216,44 +227,26 @@ body {
   #cardSlots div, #cardPile div {
     float: left;
     /* left: 100px; */
-    width: 200px;
-    height: 200px;
-    padding: 5px;
-    padding-top: 5px;
-    padding-bottom: 0;
+    width: 180px;
+    height: 180px;
+    padding: 5px 5px 5px 5px;
+    /* padding-top: 5px;
+    padding-bottom: 1; */
+    margin-left: auto;
+    margin-right: auto;
     /* border: 2px solid #333; */
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+    line-height: 1.3;
     /* margin: 0 0 0 10px; */
-    margin-left: auto;
-    margin-right: auto;
     /* background: #fff; */
   }
 
   #cardPile div{
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5px;
+    margin-right: 5px;
     /* background: #ffd; */
-  }
-
-  #emptySlots div, #emptyPile div {
-    float: left;
-    width: 200px;
-    height: 200px;
-    padding: 5px;
-    padding-top: 5px;
-    padding-bottom: 0;
-    /* border: 2px solid #333; */
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    margin: 0 0 0 10px;
-    /* background: #fff; */
-  }
-
-  #cardSlots div:first-child, #cardPile div:first-child {
-    margin-left: 0;
   }
 
   #cardSlots div.hovered {
@@ -357,7 +350,7 @@ body {
   .initMessage {
     position: absolute;
     left: 20%;
-    top: 200px;
+    top: 120px;
     /* clear: both;
     float: none; */
     margin-left: auto;
@@ -530,7 +523,7 @@ body {
     .wideBox {
       position: relative;
       clear: both;
-      width: 980px;
+      width: 860px;
       margin-left: auto;
       margin-right: auto;
       margin-top: 10px;
@@ -538,7 +531,7 @@ body {
       text-align: center;
       padding: 10px;
       background: #e1f1df;
-      min-width: 1000px;
+      min-width: 850px;
       border: 2px solid #FFF;
       /* border: 2px solid #333; */
       -moz-border-radius: 10px;
@@ -586,9 +579,9 @@ body {
 
   .class-emailsMsg {
     background-color: none;
-    border: 2px solid black;
-    margin-left: 20px;
-    margin-right: 20px;
+    /* border: 1px solid grey; */
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px;
   }
 
@@ -597,4 +590,10 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
+  }
+
+  .class-iconText {
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
   }

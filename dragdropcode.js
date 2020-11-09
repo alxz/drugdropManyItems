@@ -271,7 +271,7 @@
             $("#textMessage").html('<h4>'+gameText+'</h4>');
             $("#textMessage").removeClass(); // removind all classes 'gameTxtClass' : 'class-emailsMsg',
             $("#textMessage").addClass(gameTxtClass);
-            $('<div>' + imgDest[k].img + '<h4 style="margin-top: -10px;">' + imgDest[k].txt + '</h4></div>').data( 'numberLevel', {'number': imgDest[k].id, 'level': imgDest[k].level}).appendTo( '#cardSlots' ).droppable( {
+            $('<div>' + imgDest[k].img + '<h4 style="margin-top: -5px; z-index: 99;">' + imgDest[k].txt + '</h4></div>').data( 'numberLevel', {'number': imgDest[k].id, 'level': imgDest[k].level}).appendTo( '#cardSlots' ).droppable( {
             accept: '#cardPile div',
             hoverClass: 'hovered',
             drop: handleCardDrop
