@@ -9,14 +9,16 @@
     var publicDocImg = "img/documentsPilePub.png";
     var confDocImg = "img/documentsPileConf.png";
     var restrDocImg = "img/documentsPileRest.png";
-    var sensDocImg = "img/documentsPileSens.png";
+    var sensDocImg = "img/documentsPileSens.png";     
     $( init );
     var arrObjects = [
         {
             'game': {
                 'maxItems': 4,
                 'titleTxt': 'Digital medium: transporting documents off-site',
-                'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards) when transporting documents off-site',
+                'gameTxt': 'Drag and drop the document of each kind </br>to the most appropriate placeholder </br>'+
+                            '(according to MUHCs information classification standards)' + 
+                            '</br>when transporting documents off-site',
                 'gameTxtClass' : 'class-digitalMediumMsg',
                 'imgSrc': 
                     [
@@ -74,8 +76,10 @@
         {
             'game': {
                 'maxItems': 4,
-                'titleTxt': 'Emails: transporting documents off-site',
-                'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards)',
+                'titleTxt': 'Sending documents by email',
+                'gameTxt': 'Drag and drop the document of each kind </br>' +
+                            'to the most appropriate email service </br>' +
+                            '(according to MUHCs information classification standards)',
                 'gameTxtClass' : 'class-emailsMsg',
                 'imgSrc': 
                     [
@@ -133,8 +137,10 @@
         {
             'game': {
                 'maxItems': 4,
-                'titleTxt': 'Cloud Storage: transporting documents off-site',
-                'gameTxt': 'Drag and drop the document of each kind to the most appropriate placeholders (according to MUHCs information classification standards)',
+                'titleTxt': 'Cloud Storage for sharing documents',
+                'gameTxt': 'Drag and drop the document of each kind </br>' +
+                            'to the most appropriate cloud service </br>' +
+                            '(according to MUHCs information classification standards)',
                 'gameTxtClass' : 'class-cloudsMsg',
                 'imgSrc': 
                     [

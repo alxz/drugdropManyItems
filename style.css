@@ -92,7 +92,7 @@ body {
     width: 800px;
     min-width: 780px;
     /* height: 160px; */
-    padding: 40px;
+    padding: 10px;
     /* border: 1px solid #333; */
     /* border: 2px solid #333; */
     -moz-border-radius: 10px;
@@ -137,14 +137,14 @@ body {
   }
 
   .textMessageEmail {
-    margin: 0px;
-    padding: 300px 40px 300px 40px;
+    /* margin-top: 20px; */
+    padding: 300px 20px 300px 20px;
     /* border: 2px solid #333; */
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
     /* margin: 0 0 0 10px; */
-    background-image: url('img/png_2xEmail3ArrowV2.png');
+    background-image: url('img/png_2xEmailArrow.png');
     background-size:100% 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: right, left;
@@ -158,7 +158,7 @@ body {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     /* margin: 0 0 0 10px; */
-    background-image: url('img/png_FileArrows.png');
+    background-image: url('img/png_FilesArrow.png');
     background-size: 100% 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: right, left;
@@ -172,7 +172,8 @@ body {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     /* margin: 0 0 0 10px; */
-    background-image: url('img/png_CloudArrows.png');
+    /*  png_Cloud2Arrow.png; background-image: url('img/png_CloudArrows.png'); */
+    background-image: url('img/png_Cloud2Arrow.png');
     background-size: 100% 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: right, left;
@@ -356,7 +357,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 800px;
-    height: 600px;
+    /* height: 600px; */
     z-index: 100;
     /* background: #dfd; */
     /* background: rgb(170, 170, 170); */
@@ -393,7 +394,7 @@ body {
   .initContMainDiv {
     float: none;
     width: 95%;
-    height: 450px;
+    /* height: 450px; */
     padding: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -596,4 +597,17 @@ body {
     margin-top: -10px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .class-gameHint {
+    padding: 0%;    
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+  }
+
+  .class-gameHint:hover {
+    /* background-color: yellow; */
+    color: rgb(89, 10, 163);
+    /* font-size: 1.3em; */
   }

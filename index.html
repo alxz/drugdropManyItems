@@ -30,13 +30,18 @@
             <img src="img/Email.png" alt="Messages_Security" width="180" height="190" onclick="leftBotColMsg()" onmouseover="this.style.cursor='pointer';">
           </td>
           <td></br></br>
-            <img src="img/png_Cloud.png" alt="cloudServiceSecurity" width="200" height="150" onclick="rightBotColMsg()" onmouseover="this.style.cursor='pointer';">
+            <img src="img/noun_Cloud_3193592.png" alt="cloudServiceSecurity" width="200" height="150" onclick="rightBotColMsg()" onmouseover="this.style.cursor='pointer';">
           </td>
         </tr>
         <tr>
           <td><span id="gameOne" class="class-starWhite">&#9733; &#9733; &#9733; &#9733;</span></td>
           <td><span id="gameTwo" class="class-starWhite">&#9733; &#9733; &#9733; &#9733;</span></td>
           <td><span id="gameThree" class="class-starWhite">&#9733; &#9733; &#9733; &#9733;</span></td>
+        </tr>
+        <tr>
+          <td colspan="3" id="gameHint" class="class-gameHint">
+            <!-- <span id="gameHint" class="class-gameHint"></span> -->
+          </td>
         </tr>
       </table>
       
@@ -71,24 +76,32 @@
     <div id="cardPileGame3"></div> -->
 
     <div id="successMessage">
-      <h2>Congratulations, all correct!</h2>
-      <button onclick="init()">Play more games!</button>
+      <h2>Congratulations!</h2>
+      <button onclick="init()">Play another game!</button>
     </div>
 
     <div id="failedMessage">
-      <h2>Oh, no! Incorrect answer!</h2>
+      <h2>Sorry, incorrect answer!</h2>
       <button onclick="clearWrongDrop()">Try again!</button>
     </div>
 
     <div id="infoMessage">
       <h2>Even though it is possible, for this case it is not required.</h2>
-      <button onclick="clearWrongDrop()">Let's try again!</button>
+      <button onclick="clearWrongDrop()">Try a better option!</button>
     </div>
   </div>
 
 <!-- <div id="pageFoolter" class="wideBox">(c) 2020 MUHC
 </div> -->
+<script>
+  var gameHintTitle = "GOAL: In every game, documents of 4 different types (classified as Sensitive, Confidential, Restricted and public)" +
+                        " must be stored or send to third parties, complying with MUHC\'s information security standards." +
+                        " Drag-and-drop every document to the most appropriate placeholder.";
+    //gameHint:  $("#gameHint").html('<h4>'+gameHintTitle+'</h4>');
 
+    var gameHintBox = document.getElementById("gameHint");    
+    gameHintBox.innerHTML = '<h6>'+gameHintTitle+'</h6>'; 
+</script>
 </body>
 </html>
 
