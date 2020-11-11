@@ -16,7 +16,7 @@
             'game': {
                 'maxItems': 4,
                 'titleTxt': 'Digital medium: transporting documents off-site',
-                'gameTxt': 'Drag and drop the document of each kind </br>to the most appropriate placeholder </br>'+
+                'gameTxt': 'Drag and drop the document of each class</br>to the most appropriate placeholder </br>'+
                             '(according to MUHC\'s information classification standards)' + 
                             '</br>when transporting documents off-site',
                 'gameTxtClass' : 'class-digitalMediumMsg',
@@ -48,13 +48,13 @@
                         { 
                             id: 1, 
                             img:'<img src="img/USB_drive.png" alt="JustUSBKey" width="70" height="150">', 
-                            txt:'On any Digital Medium',
+                            txt:'On any digital medium',
                             level: 1
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/frefDocImgFileBriefCase.png" alt="Briefcase" width="160" height="150">', 
-                            txt:'Digital Medium is in a bag or a briefcase',
+                            txt:'Digital medium is in a bag or a briefcase',
                             level: 3  
                         },
                         {                             
@@ -77,7 +77,7 @@
             'game': {
                 'maxItems': 4,
                 'titleTxt': 'Sending documents by email',
-                'gameTxt': 'Drag and drop the document of each kind </br>' +
+                'gameTxt': 'Drag and drop the document of each class </br>' +
                             'to the most appropriate email service </br>' +
                             '(according to MUHC\'s information classification standards)',
                 'gameTxtClass' : 'class-emailsMsg',
@@ -109,25 +109,25 @@
                         { 
                             id: 1, 
                             img:'<img src="img/refDoc_EmailANY.png" alt="RegularEmail" width="130" height="130">', 
-                            txt:'Any available Email Service',
+                            txt:'Any available email service',
                             level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/refDoc_EmailMSOutlook.png" alt="microsoft-outlook-logo.png" width="130" height="130">', 
-                            txt:'MUHC Corporate Email Service',
+                            txt:'MUHC corporate email service',
                             level: 2
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="130" height="130">', 
-                            txt:'ProtonMail or Other End-To-End Encrypted Email Service',
+                            txt:'ProtonMail or other end-to-end encrypted email service',
                             level: 4
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="130" height="130">', 
-                            txt:'ProtonMail or Other End-To-End Encrypted Email Service',
+                            txt:'ProtonMail or other end-to-end encrypted email service',
                             level: 4
                         }
                     ]
@@ -137,8 +137,8 @@
         {
             'game': {
                 'maxItems': 4,
-                'titleTxt': 'Cloud Storage for sharing documents',
-                'gameTxt': 'Drag and drop the document of each kind </br>' +
+                'titleTxt': 'Cloud storage for sharing documents',
+                'gameTxt': 'Drag and drop the document of each class </br>' +
                             'to the most appropriate cloud service </br>' +
                             '(according to MUHC\'s information classification standards)',
                 'gameTxtClass' : 'class-cloudsMsg',
@@ -170,26 +170,26 @@
                         { 
                             id: 1, 
                             img:'<img src="img/refDoc_CloudANY.png" alt="cloud-storage" width="130" height="130">', 
-                            txt:'Any Cloud Service accessible by employees',
+                            txt:'Any cloud service accessible by employees',
                             level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="130" height="130">', 
-                            txt:'Only Cloud Services supporting file encryption',
+                            txt:'Only cloud services supporting file encryption',
                             level: 2
                                                        
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/refDoc_CloudMSTEAMS_MUHC.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
-                            txt:'MS TEAMS </br>MUHC Corporate Cloud',
+                            txt:'MS TEAMS </br>MUHC corporate cloud',
                             level: 3 
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_CloudRestrictedNextCloud.png" alt="nextCloud" width="130" height="130">', 
-                            txt:'NextCloud </br>MUHC Protected Cloud',
+                            txt:'NextCloud </br>MUHC protected cloud',
                             level: 4
                         }
                     ]
