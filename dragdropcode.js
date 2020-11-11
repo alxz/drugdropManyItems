@@ -17,7 +17,7 @@
                 'maxItems': 4,
                 'titleTxt': 'Digital medium: transporting documents off-site',
                 'gameTxt': 'Drag and drop the document of each kind </br>to the most appropriate placeholder </br>'+
-                            '(according to MUHCs information classification standards)' + 
+                            '(according to MUHC\'s information classification standards)' + 
                             '</br>when transporting documents off-site',
                 'gameTxtClass' : 'class-digitalMediumMsg',
                 'imgSrc': 
@@ -79,7 +79,7 @@
                 'titleTxt': 'Sending documents by email',
                 'gameTxt': 'Drag and drop the document of each kind </br>' +
                             'to the most appropriate email service </br>' +
-                            '(according to MUHCs information classification standards)',
+                            '(according to MUHC\'s information classification standards)',
                 'gameTxtClass' : 'class-emailsMsg',
                 'imgSrc': 
                     [
@@ -140,7 +140,7 @@
                 'titleTxt': 'Cloud Storage for sharing documents',
                 'gameTxt': 'Drag and drop the document of each kind </br>' +
                             'to the most appropriate cloud service </br>' +
-                            '(according to MUHCs information classification standards)',
+                            '(according to MUHC\'s information classification standards)',
                 'gameTxtClass' : 'class-cloudsMsg',
                 'imgSrc': 
                     [
