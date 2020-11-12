@@ -568,7 +568,7 @@ body {
     height: 50px;
     width: 50px;
     /* background-image: url('img/closeIconRound.png');   */
-    background-image: url('img/returnIconRoundSquare.png');
+    background-image: url('img/returnIconGreyRoundSquare.png');
     background-size: 100% 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: right, left;
