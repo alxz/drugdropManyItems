@@ -54,24 +54,28 @@ var correctCards = 0;
                             id: 1, 
                             img:'<img src="img/USB_drive.png" alt="JustUSBKey" width="70" height="150">', 
                             txt:'On any digital medium',
+                            txtFR: 'Sur le support amovible',
                             level: 1
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/frefDocImgFileBriefCase.png" alt="Briefcase" width="160" height="150">', 
                             txt:'Digital medium is in a bag or a briefcase',
+                            txtFR: 'Sur le support amovible dans un sac ou mallette',
                             level: 3  
                         },
                         {                             
                             id: 4, 
                             img:'<img src="img/USB_drive-Encryption.png" alt="Encrypted Digital Medium" width="100" height="150">', 
                             txt:'On an encrypted digital medium' ,
+                            txtFR: 'Sur le support amovible protégé par chiffrement',
                             level: 4
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/USB_drive-Encryption.png" alt="Encrypted Digital Medium" width="100" height="150">', 
                             txt:'On an encrypted digital medium',
+                            txtFR: 'Sur le support amovible protégé par chiffrement',
                             level: 4
                         }
                     ]
@@ -119,24 +123,28 @@ var correctCards = 0;
                             id: 1, 
                             img:'<img src="img/refDoc_EmailANY.png" alt="RegularEmail" width="130" height="130">', 
                             txt:'Any available email service',
+                            txtFR: 'Utiliser un courrielleur commercial fiable',
                             level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/refDoc_EmailMSOutlook.png" alt="microsoft-outlook-logo.png" width="130" height="130">', 
                             txt:'MUHC corporate email service',
+                            txtFR: 'Utiliser le courrielleur Outlook institutionnel',  
                             level: 2
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="130" height="130">', 
                             txt:'ProtonMail or other end-to-end encrypted email service',
+                            txtFR: 'Utiliser  ProtonMail, ou autre courrielleur chiffré',
                             level: 4
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="130" height="130">', 
                             txt:'ProtonMail or other end-to-end encrypted email service',
+                            txtFR: 'Utiliser  ProtonMail, ou autre courrielleur chiffré',
                             level: 4
                         }
                     ]
@@ -184,12 +192,14 @@ var correctCards = 0;
                             id: 1, 
                             img:'<img src="img/refDoc_CloudANY.png" alt="cloud-storage" width="130" height="130">', 
                             txt:'Any cloud service accessible by employees',
+                            txtFR: 'Stockés sur application infonuagique du choix de l’employé',
                             level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="130" height="130">', 
                             txt:'Only cloud services supporting file encryption',
+                            txtFR: 'Stockés sur service infonuagique qui permet le chiffrément',
                             level: 2
                                                        
                         },
@@ -197,12 +207,14 @@ var correctCards = 0;
                             id: 3, 
                             img:'<img src="img/refDoc_CloudMSTEAMS_MUHC.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
                             txt:'MS TEAMS </br>MUHC corporate cloud',
+                            txtFR: 'Stockés sur MS Teams, solution infonuagique du CUSM',
                             level: 3 
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_CloudRestrictedNextCloud.png" alt="nextCloud" width="130" height="130">', 
                             txt:'NextCloud </br>MUHC protected cloud',
+                            txtFR: 'Stockés sur les serveurs de l\'instance NextCloud',
                             level: 4
                         }
                     ]
@@ -237,13 +249,11 @@ var correctCards = 0;
         var maxItems = arrObjects[objectId].game.maxItems;
         for (let i = 0; i < arrObjects[objectId].game.imgSrc.length; i++) {
             docImg.push (arrObjects[objectId].game.imgSrc[i]);
-            //docImg[i] = arrObjects[objectId].game1.imgSrc[i];
-            //console.log("docImg[",i,"]: ",docImg[i]);             
+                        
         }
         docImg = shuffle(docImg);
         //console.log('docImg[]: ', docImg);
-        for (let i = 0; i < arrObjects[objectId].game.imgDest.length; i++) {
-            //imgDest[i] = arrObjects[objectId].game1.imgDest[i];
+        for (let i = 0; i < arrObjects[objectId].game.imgDest.length; i++) {            
             imgDest.push (arrObjects[objectId].game.imgDest[i]);
         }
         imgDest = shuffle(imgDest);
@@ -304,11 +314,19 @@ var correctCards = 0;
             $("#textMessage").html('<h4>'+gameText+'</h4>');
             $("#textMessage").removeClass(); // removind all classes 'gameTxtClass' : 'class-emailsMsg',
             $("#textMessage").addClass(gameTxtClass);
+        if (langValue == 'FRA') {
             $('<div>' + imgDest[k].img + '<h4 style="margin-top: -5px; z-index: 99;">' + imgDest[k].txt + '</h4></div>').data( 'numberLevel', {'number': imgDest[k].id, 'level': imgDest[k].level}).appendTo( '#cardSlots' ).droppable( {
-            accept: '#cardPile div',
-            hoverClass: 'hovered',
-            drop: handleCardDrop
-            } );
+                accept: '#cardPile div',
+                hoverClass: 'hovered',
+                drop: handleCardDrop
+                } );
+        } else {
+            $('<div>' + imgDest[k].img + '<h4 style="margin-top: -5px; z-index: 99;">' + imgDest[k].txtFR + '</h4></div>').data( 'numberLevel', {'number': imgDest[k].id, 'level': imgDest[k].level}).appendTo( '#cardSlots' ).droppable( {
+                accept: '#cardPile div',
+                hoverClass: 'hovered',
+                drop: handleCardDrop
+                } );
+        }
 
             // $('<div>' + imgDest[k].img + '<h4 style="margin-top: -10px;">' + imgDest[k].txt + '</h4></div>').data( 'number', imgDest[k].id ).appendTo( '#cardSlots' ).droppable( {
             //     accept: '#cardPile div',
@@ -665,6 +683,10 @@ function changeLang () {
     var titleTxt = document.getElementById("titleTxt").innerHTML; 
 
     var langValue = document.getElementById("langID").value;
+
+    // var col1Title = document.getElementById("col1Title");
+    // var col2Title = document.getElementById("col2Title");
+    // var col3Title = document.getElementById("col3Title");
     
     if (langValue == 'FRA') {
       langTxt = 'EN';
@@ -672,6 +694,9 @@ function changeLang () {
       titleTxt = "Mettez en pratique les normes de la classification en matière de sécurité de l\'information du CUSM";
       gameHintTitle = gameHintTitleFR;
       langValue = 'ENG';
+      document.getElementById("col1Title").innerHTML = "Support </br> numérique";
+      document.getElementById("col2Title").innerHTML = "Courriel </br> électronique";
+      document.getElementById("col3Title").innerHTML = "Stockage </br> dans le nuage ";
       document.getElementById("langID").value = langValue;
       console.log('Next Lang Value: ',langValue);
       
@@ -681,6 +706,9 @@ function changeLang () {
       titleTxt = "Practice MUHC\'s classification standards for Information security";
       gameHintTitle = gameHintTitleEN;
       langValue = 'FRA';
+      document.getElementById("col1Title").innerHTML = "Digital </br> medium";
+      document.getElementById("col2Title").innerHTML = "Emails";
+      document.getElementById("col3Title").innerHTML = "Cloud </br> storage";
       document.getElementById("langID").value = langValue;
       console.log('Next Lang Value: ',langValue);
       //langObj.innerHTML = langTxt;  
