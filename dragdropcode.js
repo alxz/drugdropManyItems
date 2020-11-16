@@ -691,7 +691,7 @@ function changeLang () {
     if (langValue == 'FRA') {
       langTxt = 'EN';
       //langObj.textContent = 'FR';
-      titleTxt = "Mettez en pratique les normes de la classification en matière de sécurité de l\'information du CUSM";
+      titleTxt = "Mettez en pratique les normes de la classification </br> en matière de sécurité de l\'information du CUSM";
       gameHintTitle = gameHintTitleFR;
       langValue = 'ENG';
       document.getElementById("col1Title").innerHTML = "Support </br> numérique";
@@ -703,7 +703,7 @@ function changeLang () {
     } else {
       langTxt = 'FR';
       //langObj.textContent = 'EN';
-      titleTxt = "Practice MUHC\'s classification standards for Information security";
+      titleTxt = "Practice MUHC\'s classification standards </br> for Information security";
       gameHintTitle = gameHintTitleEN;
       langValue = 'FRA';
       document.getElementById("col1Title").innerHTML = "Digital </br> medium";
