@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Just Another Drag-and-Drop Game</title>
+    <title>Information Security Drag-and-Drop Game</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" 
@@ -11,14 +11,30 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="dragdropcode.js"></script>   
-
+    <script type="text/javascript" src="dragdropcode.js"></script>       
 </head>
-<body>
-  <div id="backgroundDiv" class="class-backgroundDiv"> </div>
-
-  <div class="initMessage" id="selectGame" >
-    <div id="topRowMsg"><h3>Practice MUHC's classification standards for Information Security</h3></div>
+<body>  
+  <div id="backgroundDiv" class="class-backgroundDiv"> </div>  
+  <div class="initMessage" id="selectGame" >    
+    <div id="topRowMsg">
+      <div id="containerTitles">
+        <div id="titleDiv">
+          <h3>
+            <span id="titleTxt">
+              Practice MUHC's classification standards for Information Security
+            </span> 
+          </h3>
+        </div>
+        <div id="langDiv">
+          <span id="langBox" class="class-lang" onmouseover="this.style.cursor='pointer';" onclick="changeLang();"><span id="langTxt" value="EN">FR</span></span>
+          <input type="hidden" id="langID" name="langID" value="FRA">
+        </div>      
+      </div>
+      <!-- <div id="langDiv" class="class-langDiv">
+        <div id="langLink" class="class-lnagLink">changer la langue: FR</div>
+      </div> -->
+    </div>
+    
     <div class="initContMainDiv">
       <table id="selectGame" class="class-selectGame">        
         <th> Digital medium </th><th> Emails </th><th> Cloud storage </th>
@@ -93,14 +109,19 @@
 
 <!-- <div id="pageFoolter" class="wideBox">(c) 2020 MUHC
 </div> -->
-<script>
-  var gameHintTitle = "GOAL: In every game, documents of 4 different types (classified as Sensitive, Confidential, Restricted and public)" +
+<script type="text/javascript">
+  var gameHintTitleEN = "GOAL: In every game, documents of 4 different types (classified as Sensitive, Confidential, Restricted and public)" +
                         " must be stored or sent to third parties, complying with MUHC\'s information security standards." +
                         " Drag-and-drop every document to the most appropriate placeholder.";
-    //gameHint:  $("#gameHint").html('<h4>'+gameHintTitle+'</h4>');
+  var gameHintTitleFR = "L\'OBJECTIF DU JEU PEDAGOGIQUE" +
+                        " Dans chaque jeu, des documents de 4 types différents " +
+                        " (classés comme sensibles, confidentiels, restreints et publics) doivent être sauvegardés ou envoyés à des tiers, " +
+                        " conformément aux normes de sécurité de l\'information du CUSM. " +
+                        " Faites glisser et déposez chaque document vers l\'espace (réservé) le plus approprié."; 
 
     var gameHintBox = document.getElementById("gameHint");    
-    gameHintBox.innerHTML = '<h6>'+gameHintTitle+'</h6>'; 
+    gameHintBox.innerHTML = '<h6>'+gameHintTitleEN+'</h6>'; 
+  
 </script>
 </body>
 </html>

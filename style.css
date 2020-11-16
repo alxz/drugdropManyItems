@@ -140,7 +140,7 @@ body {
     /* margin-top: 20px; */
     /* padding: 250px 20px 250px 20px; */
     /* border: 2px solid #333; */
-    padding: 55% 5% 50% 5%;
+    padding: 55% 5px 50% 5px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -383,24 +383,6 @@ body {
     padding: 20px;
   }
 
-  #topRowMsg {
-    float: none;
-    width: 95%;
-    height: 60px;
-    padding: 15px;
-    padding-top: 0;
-    padding-bottom: 5px;
-    border: 2px solid #333;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    margin: 10px;
-    background: #333;
-    text-align: center;
-    /* text-shadow: 2px 2px #FC00FF; */
-    color: white;
-  }
-
   .initContMainDiv {
     float: none;
     width: 95%;
@@ -489,7 +471,7 @@ body {
     background-size: 100% 100%;
     /* background-repeat: no-repeat, no-repeat; */
     background-position: right, left;
-    z-index: 100;
+    z-index: 99;
   }
 
 
@@ -620,4 +602,59 @@ body {
     /* background-color: yellow; */
     color: rgb(89, 10, 163);
     /* font-size: 1.3em; */
+  }
+
+  .class-langBox {
+    /* padding: 5px;     */
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+  }
+
+
+  .class-lang {
+    /*  a:link, a:visited */
+    background-color: #615d5d;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  #topRowMsg {
+    float: none;
+    /* width: 98%;
+    height: 60px; */
+    padding: 5px;
+    padding-top: 0;
+    padding-bottom: 5px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    background: #333;
+    text-align: center;
+    /* text-shadow: 2px 2px #FC00FF; */
+    color: white;
+  }
+  
+  #titleDiv {    
+    float: left;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #langDiv {
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+  }
+
+  #containerTitles {
+    clear: both;
+    height: 80px;
   }

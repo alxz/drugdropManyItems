@@ -1,5 +1,6 @@
 
-    var correctCards = 0;
+// var langTxt = langObj.value;
+var correctCards = 0;
     var objectId = 0;    
     var uiObj = null;
     var gameOne;
@@ -16,9 +17,13 @@
             'game': {
                 'maxItems': 4,
                 'titleTxt': 'Digital medium: transporting documents off-site',
+                'titleTxtFR': 'Transport hors site des documents sur support numérique',
                 'gameTxt': 'Drag and drop the document of each class</br>to the most appropriate placeholder </br>'+
                             '(according to MUHC\'s information classification standards)' + 
                             '</br>when transporting documents off-site',
+                'gameTxtFR': 'Glissez-déposez le document de chaque classe lors du transport </br>'+
+                            'de documents hors site sur un support numérique,</br>' + 
+                            'à l\'espace réservé le plus approprié et selon les normes de classification de l\'information du CUSM',
                 'gameTxtClass' : 'class-digitalMediumMsg',
                 'imgSrc': 
                     [
@@ -77,9 +82,13 @@
             'game': {
                 'maxItems': 4,
                 'titleTxt': 'Sending documents by email',
+                'titleTxtFR': 'Envoi de documents par courriel électronique',
                 'gameTxt': 'Drag and drop the document of each class </br>' +
                             'to the most appropriate email service </br>' +
                             '(according to MUHC\'s information classification standards)',
+                'gameTxtFR': 'Glissez-déposez le document de chaque classe </br>'+
+                            '(comme pièce jointe)sur le service courriel électronique le plus approprié et </br>' + 
+                            'selon les normes de classification de l\'information du CUSM',
                 'gameTxtClass' : 'class-emailsMsg',
                 'imgSrc': 
                     [
@@ -138,9 +147,13 @@
             'game': {
                 'maxItems': 4,
                 'titleTxt': 'Cloud storage for sharing documents',
+                'titleTxtFR': 'Stockage dans le nuage pour partager des documents',
                 'gameTxt': 'Drag and drop the document of each class </br>' +
                             'to the most appropriate cloud service </br>' +
                             '(according to MUHC\'s information classification standards)',
+                'gameTxtFR': 'Glissez-déposez le document de chaque classe </br>'+
+                            'sur le service infonuagique le plus approprié et </br>' + 
+                            'selon les normes de classification de l\'information du CUSM',
                 'gameTxtClass' : 'class-cloudsMsg',
                 'imgSrc': 
                     [
@@ -201,12 +214,26 @@
     // leftTopColMsg();
 
     function init() {
-        //set initial images:
+        //set initial images:      
+               
+        var langTxt = document.getElementById("langTxt").textContent.trim();
+         
+        console.log('Lang value langTxt:',langTxt);
         var docImg = []; //to store images for items to drag-n-drop
         var imgDest = []; //to store placeholders where to drop
-        var gameText = arrObjects[objectId].game.gameTxt; // game message text
-        var gameTxtClass = arrObjects[objectId].game.gameTxtClass; // game message decoration class
-        var titleTxt = arrObjects[objectId].game.titleTxt;
+        var gameText = arrObjects[objectId].game.gameTxt; // game message text               
+        var titleTxt = "";
+        gameTxtClass = arrObjects[objectId].game.gameTxtClass; // game message decoration class
+        var langValue = document.getElementById("langID").value;
+
+        if (langValue == 'FRA') {
+            titleTxt = arrObjects[objectId].game.titleTxt;
+            gameText = arrObjects[objectId].game.gameTxt; 
+        } else {
+            titleTxt = arrObjects[objectId].game.titleTxtFR;
+            gameText = arrObjects[objectId].game.gameTxtFR; 
+        }
+
         var maxItems = arrObjects[objectId].game.maxItems;
         for (let i = 0; i < arrObjects[objectId].game.imgSrc.length; i++) {
             docImg.push (arrObjects[objectId].game.imgSrc[i]);
@@ -628,3 +655,42 @@ function showPageObjecs() {
     $("#content").show(); 
     $("#pageFoolter").show();
 }
+
+
+function changeLang () {
+    var langObj = document.getElementById("langTxt");
+    var titleObj = document.getElementById("titleTxt");
+    
+    var langTxt = document.getElementById("langTxt").innerHTML;
+    var titleTxt = document.getElementById("titleTxt").innerHTML; 
+
+    var langValue = document.getElementById("langID").value;
+    
+    if (langValue == 'FRA') {
+      langTxt = 'EN';
+      //langObj.textContent = 'FR';
+      titleTxt = "Mettez en pratique les normes de la classification en matière de sécurité de l\'information du CUSM";
+      gameHintTitle = gameHintTitleFR;
+      langValue = 'ENG';
+      document.getElementById("langID").value = langValue;
+      console.log('Next Lang Value: ',langValue);
+      
+    } else {
+      langTxt = 'FR';
+      //langObj.textContent = 'EN';
+      titleTxt = "Practice MUHC\'s classification standards for Information security";
+      gameHintTitle = gameHintTitleEN;
+      langValue = 'FRA';
+      document.getElementById("langID").value = langValue;
+      console.log('Next Lang Value: ',langValue);
+      //langObj.innerHTML = langTxt;  
+      // document.getElementById("titleTxt").innerHTML  = "Practice MUHC\'s classification standards for Information security";
+    }
+
+    titleObj.innerHTML = titleTxt;
+    langObj.innerHTML = langTxt;   
+    gameHintBox.innerHTML = '<h6>'+gameHintTitle+'</h6>';      
+    console.log('Lang value langTxtL:',langTxt);
+    
+    //location.reload();
+  }
