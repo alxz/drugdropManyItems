@@ -230,7 +230,7 @@ var correctCards = 0;
                
         var langTxt = document.getElementById("langTxt").textContent.trim();
          
-        console.log('Lang value langTxt:',langTxt);
+       // console.log('Lang value langTxt:',langTxt);
         var docImg = []; //to store images for items to drag-n-drop
         var imgDest = []; //to store placeholders where to drop
         var gameText = arrObjects[objectId].game.gameTxt; // game message text               
@@ -654,7 +654,7 @@ function checkGameState (objId) {
 
 function hidePageObjecs() {
     // using jQuery
-    console.log('!!! Time to hide page content!');
+    //console.log('!!! Time to hide page content!');
     $("#content").hide(); 
     $("#pageFoolter").hide();
     // $("#selectGame").hide();
@@ -669,7 +669,7 @@ function hidePageObjecs() {
 
 function showPageObjecs() {
     // using jQuery
-    console.log('!!! Time to show page content!');
+    //console.log('!!! Time to show page content!');
     $("#content").show(); 
     $("#pageFoolter").show();
 }

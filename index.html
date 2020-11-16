@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <title>Information Security Drag-and-Drop Game</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -21,13 +21,13 @@
         <div id="titleDiv">
           <h3>
             <span id="titleTxt">
-              Practice MUHC's classification standards </br> for Information Security
+              Mettez en pratique les normes de la classification </br> en matière de sécurité de l'information du CUSM
             </span> 
           </h3>
         </div>
         <div id="langDiv">
-          <span id="langBox" class="class-lang" onmouseover="this.style.cursor='pointer';" onclick="changeLang();"><span id="langTxt" value="EN">FR</span></span>
-          <input type="hidden" id="langID" name="langID" value="FRA">
+          <span id="langBox" class="class-lang" onmouseover="this.style.cursor='pointer';" onclick="changeLang();"><span id="langTxt" value="FR">EN</span></span>
+          <input type="hidden" id="langID" name="langID" value="ENG">
         </div>      
       </div>
       <!-- <div id="langDiv" class="class-langDiv">
@@ -37,7 +37,7 @@
     
     <div class="initContMainDiv">
       <table id="selectGame" class="class-selectGame">        
-        <th> <span id="col1Title">Digital </br> medium</span> </th><th><span id="col2Title">Emails</span> </th><th><span id="col3Title"> Cloud </br> storage</span> </th>
+        <th> <span id="col1Title"> Support </br> numérique </span> </th><th><span id="col2Title"> Courriel </br> électronique </span> </th><th><span id="col3Title"> Stockage </br> dans le nuage </span> </th>
         <tr>
           <td></br></br>
             <img src="img/USB_drive.png" alt="transportDocuments" width="100" height="180" onclick="clickTopRight()" onmouseover="this.style.cursor='pointer';">
@@ -64,8 +64,8 @@
 
     </div>
   </div>
-  <div id="pageHeader" class="wideBox">
-    <div id="textMsg" class="class-textMsg"><h2>Practice MUHC's classification standards for Information Security</h2></div>
+  <div id="pageHeader" class="wideBox">    
+    <div id="textMsg" class="class-textMsg"><h2> Mettez en pratique les normes de la classification </br> en matière de sécurité de l\'information du CUSM </h2></div>
     <div id="closeX" class="class-closeX" onclick="closeTheGame()" onmouseover="this.style.cursor='pointer';"></div>
   </div>
 
@@ -92,18 +92,18 @@
     <div id="cardPileGame3"></div> -->
 
     <div id="successMessage">
-      <h2><span id="msgCongrats"> Well done! </span></h2>
-      <button id="btnSuccess" onclick="init()">Play another game!</button>
+      <h2><span id="msgCongrats"> Bon travail! </span></h2>
+      <button id="btnSuccess" onclick="init()">Allez pour un autre jeu!</button>
     </div>
 
     <div id="failedMessage">
-      <h2><span id="msgFail"> Sorry, incorrect answer! </span></h2>
-      <button id="btnFail" onclick="clearWrongDrop()">Try again!</button>
+      <h2><span id="msgFail"> Désolé, mauvaise réponse </span></h2>
+      <button id="btnFail" onclick="clearWrongDrop()"> Re-essayez</button>
     </div>
 
     <div id="infoMessage">
-      <h2><span id="msgTryAgain"> Although possible, this choice is suboptimal. </span></h2>
-      <button id="btnTryAgain" onclick="clearWrongDrop()">Try a better option!</button>
+      <h2><span id="msgTryAgain"> Bien que possible, ce choix est sous-optimal. </span></h2>
+      <button id="btnTryAgain" onclick="clearWrongDrop()">Re-essayez</button>
     </div>
   </div>
 
@@ -120,7 +120,7 @@
                         " Faites glisser et déposez chaque document vers l\'espace (réservé) le plus approprié."; 
 
     var gameHintBox = document.getElementById("gameHint");    
-    gameHintBox.innerHTML = '<h6>'+gameHintTitleEN+'</h6>'; 
+    gameHintBox.innerHTML = '<h6>'+gameHintTitleFR+'</h6>'; 
   
 </script>
 </body>
