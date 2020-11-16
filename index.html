@@ -92,18 +92,18 @@
     <div id="cardPileGame3"></div> -->
 
     <div id="successMessage">
-      <h2>Congratulations!</h2>
-      <button onclick="init()">Play another game!</button>
+      <h2><span id="msgCongrats"> Well done! </span></h2>
+      <button id="btnSuccess" onclick="init()">Play another game!</button>
     </div>
 
     <div id="failedMessage">
-      <h2>Sorry, incorrect answer!</h2>
-      <button onclick="clearWrongDrop()">Try again!</button>
+      <h2><span id="msgFail"> Sorry, incorrect answer! </span></h2>
+      <button id="btnFail" onclick="clearWrongDrop()">Try again!</button>
     </div>
 
     <div id="infoMessage">
-      <h2>Although possible, this choice is suboptimal.</h2>
-      <button onclick="clearWrongDrop()">Try a better option!</button>
+      <h2><span id="msgTryAgain"> Although possible, this choice is suboptimal. </span></h2>
+      <button id="btnTryAgain" onclick="clearWrongDrop()">Try a better option!</button>
     </div>
   </div>
 

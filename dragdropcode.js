@@ -684,6 +684,14 @@ function changeLang () {
 
     var langValue = document.getElementById("langID").value;
 
+    var btnSuccess = document.getElementById("btnSuccess");
+    var btnFail = document.getElementById("btnFail");
+    var btnTryAgain = document.getElementById("btnTryAgain");
+
+    var msgCongrats = document.getElementById("msgCongrats");
+    var msgFail = document.getElementById("msgFail");
+    var msgTryAgain = document.getElementById("msgTryAgain");
+
     // var col1Title = document.getElementById("col1Title");
     // var col2Title = document.getElementById("col2Title");
     // var col3Title = document.getElementById("col3Title");
@@ -697,6 +705,14 @@ function changeLang () {
       document.getElementById("col1Title").innerHTML = "Support </br> numérique";
       document.getElementById("col2Title").innerHTML = "Courriel </br> électronique";
       document.getElementById("col3Title").innerHTML = "Stockage </br> dans le nuage ";
+      btnSuccess.innerText = "Allez pour un autre jeu!";
+      btnFail.innerText = "Re-essayez";
+      btnTryAgain.innerText = "Re-essayez";
+
+      msgCongrats.innerText = "Bon travail!";
+      msgFail.innerText = "Désolé, mauvaise réponse";
+      msgTryAgain.innerText = "Bien que possible, ce choix est sous-optimal.";
+
       document.getElementById("langID").value = langValue;
       console.log('Next Lang Value: ',langValue);
       
@@ -709,6 +725,14 @@ function changeLang () {
       document.getElementById("col1Title").innerHTML = "Digital </br> medium";
       document.getElementById("col2Title").innerHTML = "Emails";
       document.getElementById("col3Title").innerHTML = "Cloud </br> storage";
+      btnSuccess.innerText = "Play another game!";
+      btnFail.innerText = "Try again!";
+      btnTryAgain.innerText = "Try a better option!";
+
+      msgCongrats.innerText = "Well done!";
+      msgFail.innerText = "Sorry, incorrect answer!";
+      msgTryAgain.innerText = "Although possible, this choice is suboptimal.";
+
       document.getElementById("langID").value = langValue;
       console.log('Next Lang Value: ',langValue);
       //langObj.innerHTML = langTxt;  
