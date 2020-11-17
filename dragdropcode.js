@@ -10,7 +10,12 @@ var correctCards = 0;
     var publicDocImg = "img/documentsPilePub.png";
     var confDocImg = "img/documentsPileConf.png";
     var restrDocImg = "img/documentsPileRest.png";
-    var sensDocImg = "img/documentsPileSens.png";     
+    var sensDocImg = "img/documentsPileSens.png";
+    var publicDocImgFR = "img/documentsPilePub.png";
+    var confDocImgFR = "img/documentsPileConf_FRA.png";
+    var restrDocImgFR = "img/documentsPileRestrient_FRA.png";
+    var sensDocImgFR = "img/documentsPileSensible_FRA.png";        
+    
     $( init );
     var arrObjects = [
         {
@@ -30,21 +35,25 @@ var correctCards = 0;
                         {
                             id: 1, 
                             img:'<img src="' + publicDocImg + '" alt="publicPapers" width="190" height="150">',
+                            imgFR:'<img src="' + publicDocImgFR + '" alt="publicPapers" width="190" height="150">',
                             level: 1
                         },
                         {
                             id: 3, 
                             img:'<img src="' + restrDocImg + '" alt="confidentialPapers" width="190" height="150">',
+                            imgFR:'<img src="' + restrDocImgFR + '" alt="confidentialPapers" width="190" height="150">',
                             level: 3  
                         },
                         {                             
                             id: 4, 
                             img:'<img src="' + confDocImg + '" alt="restrictedPapers" width="190" height="150">',
+                            imgFR:'<img src="' + confDocImgFR + '" alt="restrictedPapers" width="190" height="150">',
                             level: 4
                         },
                         {
                             id: 4,
                             img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="190" height="150">',
+                            imgFR:'<img src="' + sensDocImgFR + '" alt="sensitivePapers" width="190" height="150">',
                             level: 4
                         }                        
                     ],
@@ -99,21 +108,25 @@ var correctCards = 0;
                         {
                             id: 1, 
                             img:'<img src="' + publicDocImg + '" alt="publicPapers" width="190" height="150">',
+                            imgFR:'<img src="' + publicDocImgFR + '" alt="publicPapers" width="190" height="150">',
                             level: 1
                         },
                         {
                             id: 2, 
                             img:'<img src="' + restrDocImg + '" alt="restrictedPapers" width="190" height="150">',
+                            imgFR:'<img src="' + restrDocImgFR + '" alt="confidentialPapers" width="190" height="150">',
                             level: 2
                         },
                         { 
                             id: 4, 
                             img:'<img src="' + confDocImg + '" alt="confidentialPapers" width="190" height="150">',
+                            imgFR:'<img src="' + confDocImgFR + '" alt="restrictedPapers" width="190" height="150">',
                             level: 4
                         },
                         {
                             id: 4,
                             img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="190" height="150">',
+                            imgFR:'<img src="' + sensDocImgFR + '" alt="sensitivePapers" width="190" height="150">',
                             level: 4
                         }                        
                     ],
@@ -168,21 +181,25 @@ var correctCards = 0;
                         {
                             id: 1, 
                             img:'<img src="' + publicDocImg + '" alt="publicPapers" width="190" height="150">',
+                            imgFR:'<img src="' + publicDocImg + '" alt="publicPapers" width="190" height="150">',
                             level: 1
                         },
                         {
                             id: 2, 
                             img:'<img src="' + restrDocImg + '" alt="restrictedPapers" width="190" height="150">',
+                            imgFR:'<img src="' + restrDocImgFR + '" alt="restrictedPapers" width="190" height="150">',
                             level: 2                            
                         },
                         { 
                             id: 3, 
                             img:'<img src="' + confDocImg + '" alt="confidentialPapers" width="190" height="150">',
+                            imgFR:'<img src="' + confDocImgFR + '" alt="restrictedPapers" width="190" height="150">',
                             level: 3
                         },
                         {
                             id: 4,
                             img:'<img src="' + sensDocImg + '" alt="sensitivePapers" width="190" height="150">',
+                            imgFR:'<img src="' + sensDocImgFR + '" alt="sensitivePapers" width="190" height="150">',
                             level: 4
                         }                        
                     ],
@@ -304,29 +321,38 @@ var correctCards = 0;
         $("#content").css("background-color", backColor);
         // Create the pile of shuffled cards
         for (let k = 0; k < maxItems; k++) {
-            $('<div>' + docImg[k].img + '</div>').data( 'numberLevel', {'number': docImg[k].id, 'level': docImg[k].level }).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
-                containment: '#content',
-                stack: '#cardPile div',
-                cursor: 'move',
-                revert: true
-                } );
+            if (langValue == 'FRA') {
+                $('<div>' + docImg[k].img + '</div>').data( 'numberLevel', {'number': docImg[k].id, 'level': docImg[k].level }).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+                    containment: '#content',
+                    stack: '#cardPile div',
+                    cursor: 'move',
+                    revert: true
+                    } );
+            } else {
+                $('<div>' + docImg[k].imgFR + '</div>').data( 'numberLevel', {'number': docImg[k].id, 'level': docImg[k].level }).attr( 'id', 'card'+1 ).appendTo( '#cardPile' ).draggable( {
+                    containment: '#content',
+                    stack: '#cardPile div',
+                    cursor: 'move',
+                    revert: true
+                    } );
+            }
             //$("#gameTextDiv").html(gameText);
             $("#textMessage").html('<h4>'+gameText+'</h4>');
             $("#textMessage").removeClass(); // removind all classes 'gameTxtClass' : 'class-emailsMsg',
             $("#textMessage").addClass(gameTxtClass);
-        if (langValue == 'FRA') {
-            $('<div>' + imgDest[k].img + '<h4 style="margin-top: -5px; z-index: 99;">' + imgDest[k].txt + '</h4></div>').data( 'numberLevel', {'number': imgDest[k].id, 'level': imgDest[k].level}).appendTo( '#cardSlots' ).droppable( {
-                accept: '#cardPile div',
-                hoverClass: 'hovered',
-                drop: handleCardDrop
-                } );
-        } else {
-            $('<div>' + imgDest[k].img + '<h4 style="margin-top: -5px; z-index: 99;">' + imgDest[k].txtFR + '</h4></div>').data( 'numberLevel', {'number': imgDest[k].id, 'level': imgDest[k].level}).appendTo( '#cardSlots' ).droppable( {
-                accept: '#cardPile div',
-                hoverClass: 'hovered',
-                drop: handleCardDrop
-                } );
-        }
+            if (langValue == 'FRA') {
+                $('<div>' + imgDest[k].img + '<h4 style="margin-top: -5px; z-index: 99;">' + imgDest[k].txt + '</h4></div>').data( 'numberLevel', {'number': imgDest[k].id, 'level': imgDest[k].level}).appendTo( '#cardSlots' ).droppable( {
+                    accept: '#cardPile div',
+                    hoverClass: 'hovered',
+                    drop: handleCardDrop
+                    } );
+            } else {
+                $('<div>' + imgDest[k].img + '<h4 style="margin-top: -5px; z-index: 99;">' + imgDest[k].txtFR + '</h4></div>').data( 'numberLevel', {'number': imgDest[k].id, 'level': imgDest[k].level}).appendTo( '#cardSlots' ).droppable( {
+                    accept: '#cardPile div',
+                    hoverClass: 'hovered',
+                    drop: handleCardDrop
+                    } );
+            }
 
             // $('<div>' + imgDest[k].img + '<h4 style="margin-top: -10px;">' + imgDest[k].txt + '</h4></div>').data( 'number', imgDest[k].id ).appendTo( '#cardSlots' ).droppable( {
             //     accept: '#cardPile div',
