@@ -1,5 +1,5 @@
 
-// var langTxt = langObj.value;
+//=======================EmailTo: azap_ad@yahoo.com 2020 ==============================
 var correctCards = 0;
     var objectId = 0;    
     var uiObj = null;
