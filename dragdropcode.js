@@ -13,7 +13,7 @@ var correctCards = 0;
     var sensDocImg = "img/documentsPileSens.png";
     var publicDocImgFR = "img/documentsPilePub.png";
     var confDocImgFR = "img/documentsPileConf_FRA.png";
-    var restrDocImgFR = "img/documentsPileRestrient_FRA.png";
+    var restrDocImgFR = "img/documentsPileRestreint_FRA.png";
     var sensDocImgFR = "img/documentsPileSensible_FRA.png";        
     
     $( init );
@@ -26,9 +26,10 @@ var correctCards = 0;
                 'gameTxt': 'Drag and drop the document of each class</br>to the most appropriate placeholder </br>'+
                             '(according to MUHC\'s information classification standards)' + 
                             '</br>when transporting documents off-site',
-                'gameTxtFR': 'Glissez-déposez le document de chaque classe lors du transport </br>'+
-                            'de documents hors site sur un support numérique,</br>' + 
-                            'à l\'espace réservé le plus approprié et selon les normes de classification de l\'information du CUSM',
+                'gameTxtFR': 'Glissez-déposez le document de chaque catégorie, </br>'+
+                            'dans l\'espace réservé le plus approprié, selon les normes</br>' + 
+                            ' de classification de l\'information du CUSM pour le transport' +
+                            ' hors site de documents stockés sur un support numérique.',
                 'gameTxtClass' : 'class-digitalMediumMsg',
                 'imgSrc': 
                     [
@@ -63,28 +64,28 @@ var correctCards = 0;
                             id: 1, 
                             img:'<img src="img/USB_drive.png" alt="JustUSBKey" width="70" height="150">', 
                             txt:'On any digital medium',
-                            txtFR: 'Sur le support amovible',
+                            txtFR: 'Sur un support amovible quelconque',
                             level: 1
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/frefDocImgFileBriefCase.png" alt="Briefcase" width="160" height="150">', 
                             txt:'Digital medium is in a bag or a briefcase',
-                            txtFR: 'Sur le support amovible dans un sac ou mallette',
+                            txtFR: 'Sur un support amovible placé dans un sac ou une mallette',
                             level: 3  
                         },
                         {                             
                             id: 4, 
                             img:'<img src="img/USB_drive-Encryption.png" alt="Encrypted Digital Medium" width="100" height="150">', 
                             txt:'On an encrypted digital medium' ,
-                            txtFR: 'Sur le support amovible protégé par chiffrement',
+                            txtFR: 'Sur un support amovible protégé par chiffrement',
                             level: 4
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/USB_drive-Encryption.png" alt="Encrypted Digital Medium" width="100" height="150">', 
                             txt:'On an encrypted digital medium',
-                            txtFR: 'Sur le support amovible protégé par chiffrement',
+                            txtFR: 'Sur un support amovible protégé par chiffrement',
                             level: 4
                         }
                     ]
@@ -99,9 +100,10 @@ var correctCards = 0;
                 'gameTxt': 'Drag and drop the document of each class </br>' +
                             'to the most appropriate email service </br>' +
                             '(according to MUHC\'s information classification standards)',
-                'gameTxtFR': 'Glissez-déposez le document de chaque classe </br>'+
-                            '(comme pièce jointe)sur le service courriel électronique le plus approprié et </br>' + 
-                            'selon les normes de classification de l\'information du CUSM',
+                'gameTxtFR': 'Glissez-déposez le document de chaque catégorie</br>'+
+                            'en pièce jointe sur le service courriel électronique,</br>' + 
+                            'le plus approprié selon les normes de classification</br>' +
+                            'de l\'information du CUSM.',
                 'gameTxtClass' : 'class-emailsMsg',
                 'imgSrc': 
                     [
@@ -136,28 +138,28 @@ var correctCards = 0;
                             id: 1, 
                             img:'<img src="img/refDoc_EmailANY.png" alt="RegularEmail" width="130" height="130">', 
                             txt:'Any available email service',
-                            txtFR: 'Utiliser un courrielleur commercial fiable',
+                            txtFR: 'N\'importe quel courrielleur',
                             level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/refDoc_EmailMSOutlook.png" alt="microsoft-outlook-logo.png" width="130" height="130">', 
                             txt:'MUHC corporate email service',
-                            txtFR: 'Utiliser le courrielleur Outlook institutionnel',  
+                            txtFR: 'courrielleur institutionnel Outlook',  
                             level: 2
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="130" height="130">', 
                             txt:'ProtonMail or other end-to-end encrypted email service',
-                            txtFR: 'Utiliser  ProtonMail, ou autre courrielleur chiffré',
+                            txtFR: 'ProtonMail ou tout autre courriel chiffré de bout-en-bout',
                             level: 4
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="130" height="130">', 
                             txt:'ProtonMail or other end-to-end encrypted email service',
-                            txtFR: 'Utiliser  ProtonMail, ou autre courrielleur chiffré',
+                            txtFR: 'ProtonMail ou tout autre courriel chiffré de bout-en-bout',
                             level: 4
                         }
                     ]
@@ -172,9 +174,9 @@ var correctCards = 0;
                 'gameTxt': 'Drag and drop the document of each class </br>' +
                             'to the most appropriate cloud service </br>' +
                             '(according to MUHC\'s information classification standards)',
-                'gameTxtFR': 'Glissez-déposez le document de chaque classe </br>'+
-                            'sur le service infonuagique le plus approprié et </br>' + 
-                            'selon les normes de classification de l\'information du CUSM',
+                'gameTxtFR': 'Glissez-déposez chaque document </br>'+
+                            'sur le service infonuagique le plus approprié,</br>' + 
+                            'selon les normes de classification de l\'information du CUSM.',
                 'gameTxtClass' : 'class-cloudsMsg',
                 'imgSrc': 
                     [
@@ -209,14 +211,14 @@ var correctCards = 0;
                             id: 1, 
                             img:'<img src="img/refDoc_CloudANY.png" alt="cloud-storage" width="130" height="130">', 
                             txt:'Any cloud service accessible by employees',
-                            txtFR: 'Stockés sur application infonuagique du choix de l’employé',
+                            txtFR: 'Stockés sur application infonuagique du choix de l\'employé',
                             level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="130" height="130">', 
                             txt:'Only cloud services supporting file encryption',
-                            txtFR: 'Stockés sur service infonuagique qui permet le chiffrément',
+                            txtFR: 'Service infonuagique qui permet le chiffrement',
                             level: 2
                                                        
                         },
@@ -224,14 +226,14 @@ var correctCards = 0;
                             id: 3, 
                             img:'<img src="img/refDoc_CloudMSTEAMS_MUHC.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
                             txt:'MS TEAMS </br>MUHC corporate cloud',
-                            txtFR: 'Stockés sur MS Teams, solution infonuagique du CUSM',
+                            txtFR: 'MS Teams, solution infonuagique du CUSM',
                             level: 3 
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_CloudRestrictedNextCloud.png" alt="nextCloud" width="130" height="130">', 
                             txt:'NextCloud </br>MUHC protected cloud',
-                            txtFR: 'Stockés sur les serveurs de l\'instance NextCloud',
+                            txtFR: 'Serveur NextCloud, sécurisé du CUSM',
                             level: 4
                         }
                     ]

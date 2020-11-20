@@ -21,7 +21,7 @@ body {
   .gameContent {
     /* height: 800px;
     width: 900px; */
-    min-width: 880px;
+    min-width: 900px;
     min-height: 780px;
     max-width: 920px;
     max-height: 820px;
@@ -105,8 +105,8 @@ body {
   }
   .gameTextVerticalDiv {
     float: left;
-    width: 420px;
-    min-width: 400px;
+    width: 430px;
+    min-width: 430px;
     height: 700px;
     /* border: 1px solid #333; */
     /* background: rgb(235, 217, 179);  */
