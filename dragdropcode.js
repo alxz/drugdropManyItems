@@ -171,7 +171,7 @@ var correctCards = 0;
             'game': {
                 'maxItems': 4,
                 'titleTxt': 'Cloud storage for sharing documents',
-                'titleTxtFR': 'Stockage dans le nuage pour partager des documents',
+                'titleTxtFR': 'Stockage dans le \"nuage\" pour partager des documents',
                 'gameTxt': 'Drag and drop the document of each class </br>' +
                             'to the most appropriate cloud service </br>' +
                             '(according to MUHC\'s information classification standards)',
