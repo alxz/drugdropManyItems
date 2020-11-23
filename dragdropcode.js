@@ -71,7 +71,7 @@ var correctCards = 0;
                             id: 3, 
                             img:'<img src="img/frefDocImgFileBriefCase.png" alt="Briefcase" width="160" height="150">', 
                             txt:'Digital medium is in a bag or a briefcase',
-                            txtFR: 'Sur un support amovible placé dans un sac ou une mallette',
+                            txtFR: 'Sur support amovible transporté dans une mallette ou un sac fermé',
                             level: 3  
                         },
                         {                             
@@ -96,13 +96,14 @@ var correctCards = 0;
             'game': {
                 'maxItems': 4,
                 'titleTxt': 'Sending documents by email',
-                'titleTxtFR': 'Envoi de documents par courriel électronique',
+                'titleTxtFR': 'Envoi de documents par courriel',
                 'gameTxt': 'Drag and drop the document of each class </br>' +
                             'to the most appropriate email service </br>' +
                             '(according to MUHC\'s information classification standards)',
-                'gameTxtFR': 'Glissez-déposez le document de chaque catégorie</br>'+
-                            'en pièce jointe sur le service courriel électronique,</br>' + 
-                            'le plus approprié selon les normes de classification</br>' +
+                'gameTxtFR': 'Glissez-déposez chaque document</br>'+
+                            'comme pièce jointe, sur le service</br>'+
+                            'de courriel électronique le plus approprié,</br>' + 
+                            'selon les normes de classification</br>' +
                             'de l\'information du CUSM.',
                 'gameTxtClass' : 'class-emailsMsg',
                 'imgSrc': 
@@ -138,28 +139,28 @@ var correctCards = 0;
                             id: 1, 
                             img:'<img src="img/refDoc_EmailANY.png" alt="RegularEmail" width="130" height="130">', 
                             txt:'Any available email service',
-                            txtFR: 'N\'importe quel courrielleur',
+                            txtFR: 'Courrielleur quelconque',
                             level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/refDoc_EmailMSOutlook.png" alt="microsoft-outlook-logo.png" width="130" height="130">', 
                             txt:'MUHC corporate email service',
-                            txtFR: 'courrielleur institutionnel Outlook',  
+                            txtFR: 'Outlook courrielleur institutionnel',  
                             level: 2
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="130" height="130">', 
                             txt:'ProtonMail or other end-to-end encrypted email service',
-                            txtFR: 'ProtonMail ou tout autre courriel chiffré de bout-en-bout',
+                            txtFR: 'ProtonMail ou autre courrielleur chiffré de bout-en-bout',
                             level: 4
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_EmailProtonEncrypt.png" alt="Proton_e2e-encryp" width="130" height="130">', 
                             txt:'ProtonMail or other end-to-end encrypted email service',
-                            txtFR: 'ProtonMail ou tout autre courriel chiffré de bout-en-bout',
+                            txtFR: 'ProtonMail ou autre courrielleur chiffré de bout-en-bout',
                             level: 4
                         }
                     ]
@@ -174,7 +175,7 @@ var correctCards = 0;
                 'gameTxt': 'Drag and drop the document of each class </br>' +
                             'to the most appropriate cloud service </br>' +
                             '(according to MUHC\'s information classification standards)',
-                'gameTxtFR': 'Glissez-déposez chaque document </br>'+
+                'gameTxtFR': 'Glissez-déposez chaque document</br>'+
                             'sur le service infonuagique le plus approprié,</br>' + 
                             'selon les normes de classification de l\'information du CUSM.',
                 'gameTxtClass' : 'class-cloudsMsg',
@@ -211,14 +212,14 @@ var correctCards = 0;
                             id: 1, 
                             img:'<img src="img/refDoc_CloudANY.png" alt="cloud-storage" width="130" height="130">', 
                             txt:'Any cloud service accessible by employees',
-                            txtFR: 'Stockés sur application infonuagique du choix de l\'employé',
+                            txtFR: 'Solution infonuagique quelconque',
                             level: 1
                         },
                         { 
                             id: 2, 
                             img:'<img src="img/refDoc_CloudRestricted.png" alt="refDoc_CloudRestricted" width="130" height="130">', 
                             txt:'Only cloud services supporting file encryption',
-                            txtFR: 'Service infonuagique qui permet le chiffrement',
+                            txtFR: 'Solution infonuagique qui chiffre les données sur ses serveurs',
                             level: 2
                                                        
                         },
@@ -226,14 +227,14 @@ var correctCards = 0;
                             id: 3, 
                             img:'<img src="img/refDoc_CloudMSTEAMS_MUHC.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
                             txt:'MS TEAMS </br>MUHC corporate cloud',
-                            txtFR: 'MS Teams, solution infonuagique du CUSM',
+                            txtFR: 'MS Teams solution infonuagique corporative au CUSM',
                             level: 3 
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_CloudRestrictedNextCloud.png" alt="nextCloud" width="130" height="130">', 
                             txt:'NextCloud </br>MUHC protected cloud',
-                            txtFR: 'Serveur NextCloud, sécurisé du CUSM',
+                            txtFR: 'NextCloud Solution sécurisée du CUSM',
                             level: 4
                         }
                     ]
@@ -677,7 +678,7 @@ function checkGameState (objId) {
         default:
             console.log("game State verification.... ");
             break;
-    } 
+    }
 }
 
 function hidePageObjecs() {
@@ -727,19 +728,19 @@ function changeLang () {
     if (langValue == 'FRA') {
       langTxt = 'EN';
       //langObj.textContent = 'FR';
-      titleTxt = "Mettez en pratique les normes de la classification </br> en matière de sécurité de l\'information du CUSM";
+      titleTxt = "Appliquez les normes de classification</br>pour la sécurité de l\'information au CUSM";
       gameHintTitle = gameHintTitleFR;
       langValue = 'ENG';
       document.getElementById("col1Title").innerHTML = "Support </br> numérique";
       document.getElementById("col2Title").innerHTML = "Courriel </br> électronique";
       document.getElementById("col3Title").innerHTML = "Stockage </br> dans le nuage ";
-      btnSuccess.innerText = "Allez pour un autre jeu!";
-      btnFail.innerText = "Re-essayez";
-      btnTryAgain.innerText = "Re-essayez";
+      btnSuccess.innerText = "Jouer à un autre mini-jeu";
+      btnFail.innerText = "Réessayez";
+      btnTryAgain.innerText = "Réessayez";
 
-      msgCongrats.innerText = "Bon travail!";
+      msgCongrats.innerText = "Bien joué !";
       msgFail.innerText = "Désolé, mauvaise réponse";
-      msgTryAgain.innerText = "Bien que possible, ce choix est sous-optimal.";
+      msgTryAgain.innerText = "Ce choix est possible,</br> mais il n’est pas optimal.";
 
       document.getElementById("langID").value = langValue;
       console.log('Next Lang Value: ',langValue);
