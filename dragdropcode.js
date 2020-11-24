@@ -26,10 +26,10 @@ var correctCards = 0;
                 'gameTxt': 'Drag and drop the document of each class</br>to the most appropriate placeholder </br>'+
                             '(according to MUHC\'s information classification standards)' + 
                             '</br>when transporting documents off-site',
-                'gameTxtFR': 'Glissez-déposez le document de chaque catégorie, </br>'+
-                            'dans l\'espace réservé le plus approprié, selon les normes</br>' + 
-                            ' de classification de l\'information du CUSM pour le transport' +
-                            ' hors site de documents stockés sur un support numérique.',
+                'gameTxtFR': 'Glissez-déposez chaque document, </br>'+
+                            'sur la clé USB la plus appropriée,</br>' + 
+                            'selon les normes de classification de l\'information du CUSM' +
+                            'pour le transport hors site de documents stockés sur un support numérique amovible',
                 'gameTxtClass' : 'class-digitalMediumMsg',
                 'imgSrc': 
                     [
@@ -64,28 +64,28 @@ var correctCards = 0;
                             id: 1, 
                             img:'<img src="img/USB_drive.png" alt="JustUSBKey" width="70" height="150">', 
                             txt:'On any digital medium',
-                            txtFR: 'Sur un support amovible quelconque',
+                            txtFR: 'Sur support amovible quelconque',
                             level: 1
                         },
                         { 
                             id: 3, 
                             img:'<img src="img/frefDocImgFileBriefCase.png" alt="Briefcase" width="160" height="150">', 
                             txt:'Digital medium is in a bag or a briefcase',
-                            txtFR: 'Sur support amovible transporté dans une mallette ou un sac fermé',
+                            txtFR: 'Sur support amovible dans une mallette ou un sac fermé',
                             level: 3  
                         },
                         {                             
                             id: 4, 
                             img:'<img src="img/USB_drive-Encryption.png" alt="Encrypted Digital Medium" width="100" height="150">', 
                             txt:'On an encrypted digital medium' ,
-                            txtFR: 'Sur un support amovible protégé par chiffrement',
+                            txtFR: 'Sur support amovible protégé </br> par chiffrement',
                             level: 4
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/USB_drive-Encryption.png" alt="Encrypted Digital Medium" width="100" height="150">', 
                             txt:'On an encrypted digital medium',
-                            txtFR: 'Sur un support amovible protégé par chiffrement',
+                            txtFR: 'Sur support amovible protégé </br> par chiffrement',
                             level: 4
                         }
                     ]
