@@ -28,8 +28,8 @@ var correctCards = 0;
                             '</br>when transporting documents off-site',
                 'gameTxtFR': 'Glissez-déposez chaque document, </br>'+
                             'sur la clé USB la plus appropriée,</br>' + 
-                            'selon les normes de classification de l\'information du CUSM' +
-                            'pour le transport hors site de documents stockés sur un support numérique amovible',
+                            'selon les normes de classification de l\'information du CUSM </br>' +
+                            'pour le transport hors site de documents stockés </br> sur un support numérique amovible',
                 'gameTxtClass' : 'class-digitalMediumMsg',
                 'imgSrc': 
                     [
