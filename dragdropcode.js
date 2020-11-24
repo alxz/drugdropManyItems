@@ -234,7 +234,7 @@ var correctCards = 0;
                             id: 4, 
                             img:'<img src="img/refDoc_CloudRestrictedNextCloud.png" alt="nextCloud" width="130" height="130">', 
                             txt:'NextCloud </br> MUHC protected cloud',
-                            txtFR: 'NextCloud </br> Solution sécurisée du CUSM',
+                            txtFR: 'NextCloud </br> Solution sécurisée </br> du CUSM',
                             level: 4
                         }
                     ]
