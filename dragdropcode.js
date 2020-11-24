@@ -227,14 +227,14 @@ var correctCards = 0;
                             id: 3, 
                             img:'<img src="img/refDoc_CloudMSTEAMS_MUHC.png" alt="refDoc_CloudConfidential" width="130" height="130">', 
                             txt:'MS TEAMS </br>MUHC corporate cloud',
-                            txtFR: 'MS Teams solution infonuagique corporative au CUSM',
+                            txtFR: 'MS Teams </br> solution infonuagique corporative au CUSM',
                             level: 3 
                         },
                         { 
                             id: 4, 
                             img:'<img src="img/refDoc_CloudRestrictedNextCloud.png" alt="nextCloud" width="130" height="130">', 
-                            txt:'NextCloud </br>MUHC protected cloud',
-                            txtFR: 'NextCloud Solution sécurisée du CUSM',
+                            txt:'NextCloud </br> MUHC protected cloud',
+                            txtFR: 'NextCloud </br> Solution sécurisée du CUSM',
                             level: 4
                         }
                     ]
