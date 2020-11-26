@@ -740,7 +740,7 @@ function changeLang () {
 
       msgCongrats.innerText = "Bien joué !";
       msgFail.innerText = "Désolé, mauvaise réponse";
-      msgTryAgain.innerText = "Ce choix est possible,</br> mais il n’est pas optimal.";
+      msgTryAgain.innerHTML = "Ce choix est possible," + "</br> " + " mais il n'est pas optimal.";
 
       document.getElementById("langID").value = langValue;
       console.log('Next Lang Value: ',langValue);
