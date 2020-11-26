@@ -738,8 +738,8 @@ function changeLang () {
       btnFail.innerText = "Réessayez";
       btnTryAgain.innerText = "Réessayez";
 
-      msgCongrats.innerText = "Bien joué !";
-      msgFail.innerText = "Désolé, mauvaise réponse";
+      msgCongrats.innerHTML = "Bien joué !";
+      msgFail.innerHTML = "Désolé, mauvaise réponse";
       msgTryAgain.innerHTML = "Ce choix est possible," + "</br> " + " mais il n'est pas optimal.";
 
       document.getElementById("langID").value = langValue;
@@ -758,9 +758,9 @@ function changeLang () {
       btnFail.innerText = "Try again!";
       btnTryAgain.innerText = "Try a better option!";
 
-      msgCongrats.innerText = "Well done!";
-      msgFail.innerText = "Sorry, incorrect answer!";
-      msgTryAgain.innerText = "Although possible, this choice is suboptimal.";
+      msgCongrats.innerHTML = "Well done!";
+      msgFail.innerHTML = "Sorry, incorrect answer!";
+      msgTryAgain.innerHTML = "Although possible," + "</br> " + "this choice is suboptimal.";
 
       document.getElementById("langID").value = langValue;
       console.log('Next Lang Value: ',langValue);
