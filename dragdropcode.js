@@ -754,7 +754,7 @@ function changeLang () {
       document.getElementById("col1Title").innerHTML = "Digital </br> medium";
       document.getElementById("col2Title").innerHTML = "Emails";
       document.getElementById("col3Title").innerHTML = "Cloud </br> storage";
-      btnSuccess.innerText = "Play another mini-game!";
+      btnSuccess.innerText = "Play another minigame!";
       btnFail.innerText = "Try again!";
       btnTryAgain.innerText = "Try a better option!";
 
