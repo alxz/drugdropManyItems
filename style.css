@@ -473,6 +473,21 @@ body {
     background-position: right, left;
     z-index: 99;
   }
+  .class-dimBackground {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    float: none;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.3);
+    opacity: 0.5;
+    /* background-image: url('img/numericBckgrd.png'); */
+    background-size: 100% 100%;
+    /* background-repeat: no-repeat, no-repeat; */
+    background-position: right, left;
+    z-index: 99;
+  }
 
 
   .class-selectGame {
@@ -660,3 +675,16 @@ body {
     clear: both;
     height: 80px;
   }
+
+  #progressBarDiv {
+    width: 100%;
+    background-color: grey;
+  }
+
+  #progressBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+  }
+
+  

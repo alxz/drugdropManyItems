@@ -282,7 +282,7 @@ var correctCards = 0;
         
         //show background div:
         // adding a class: class-backgroundDiv     
-
+        $('#backgroundDiv').removeClass('class-dimBackground');
         $('#backgroundDiv').addClass('class-backgroundDiv');
         $('#backgroundDiv').show();      
             
@@ -400,6 +400,8 @@ var correctCards = 0;
             //$(this).droppable( 'disable' );
             //ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
             //ui.draggable.draggable( 'option', 'revert', false );
+            $('#backgroundDiv').addClass('class-dimBackground');
+            $('#backgroundDiv').show();  
             $(msgObj).show();
             $(msgObj).animate( {
                 left: '35%',
@@ -428,6 +430,8 @@ var correctCards = 0;
 
     function clearWrongDrop() {
         //console.log('Wrong placement!');
+        $('#backgroundDiv').removeClass('class-dimBackground');
+        $('#backgroundDiv').hide();
         $('#successMessage').hide();  // Hide the success message  
         $('#failedMessage').hide(); // Hide the failure message
         $('#infoMessage').hide(); // Hide the failure message
@@ -472,6 +476,7 @@ var correctCards = 0;
           // Manage Document Store and transportation + USB
         // $( init );
         //showPageObjecs();
+        
         if ( isFlip === true ) {            
             m = $('#cardPile');
             n = $('#cardSlots');
@@ -775,3 +780,47 @@ function changeLang () {
     
     //location.reload();
   }
+
+
+
+function sleepNow() {
+    // console.log(" ----> Sleep process!!! For ",duration," sec");
+
+    tmr = false, cnt = 0;
+            setInterval(function(){
+                if(tmr) timer.innerText = ++cnt;
+            },10);
+
+	// return new Promise(resolve => {
+	// 	setTimeout(() => {
+	// 		resolve()
+	// 	}, duration * 1000)
+	// })
+}  
+
+function drawProgress() {
+    console.log("==> Time to sleep for some period!");
+    const barObjDiv = document.getElementById("progressBarDiv");
+    barObjDiv.style.display = "block";
+    var iBar = 0;
+    function move() {
+        if (iBar==0) {
+            iBar = 1;
+            var elem = document.getElementById("progressBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if ( width >= 100) {
+                    clearInterval(id);
+                    iBar = 0;
+                } else {
+                    width ++;
+                    elem.style.width = width + "%";
+                }
+            }
+        }
+    }    
+    barObjDiv.style.display = "none";
+    console.log("==> Time to wake up!");
+    // await sleepNow(15);
+}
