@@ -339,6 +339,7 @@ var correctCards = 0;
                     revert: true
                     } );
             }
+            
             //$("#gameTextDiv").html(gameText);
             $("#textMessage").html('<h4>'+gameText+'</h4>');
             $("#textMessage").removeClass(); // removind all classes 'gameTxtClass' : 'class-emailsMsg',
