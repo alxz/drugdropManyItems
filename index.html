@@ -59,20 +59,13 @@
             <!-- <span id="gameHint" class="class-gameHint"></span> -->
           </td>
         </tr>
-        <!-- <tr>
-          <td colspan="3">
-            <div id="progressBarDiv" style = "display: none;">
-              <div id="progressBar"></div>
-            </div>
-          </td>
-        </tr> -->
       </table>
       
 
     </div>
   </div>
   <div id="pageHeader" class="wideBox">    
-    <div id="textMsg" class="class-textMsg"><h2>Appliquez les normes de classification</br>pour la sécurité de l'information au CUSM</h2></div>
+    <div id="textMsg" class="class-textMsg"></div>
     <div id="closeX" class="class-closeX" onclick="closeTheGame()" onmouseover="this.style.cursor='pointer';"></div>
   </div>
 
@@ -128,7 +121,7 @@
 
     var gameHintBox = document.getElementById("gameHint");    
     gameHintBox.innerHTML = '<h6>'+gameHintTitleFR+'</h6>'; 
-  
+    hidePageObjecs();
 </script>
 </body>
 </html>
